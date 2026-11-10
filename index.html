@@ -1,0 +1,4844 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyber-dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftFlow.ai — Don't Just Watch The AI Revolution. Build A Business With It.</title>
+  <meta name="description"
+    content="Start your solo founder journey in the AI era. Get lifetime access to SwiftFlow.ai, a ready-made enterprise WhatsApp CRM & AI Automation SaaS platform. One-time payment. Zero royalties.">
+  <meta name="keywords"
+    content="WhatsApp CRM, Solo Founder, AI SaaS, WhatsApp Automation, AI Era Entrepreneurship, Meta Cloud API, WhatsApp Business Suite">
+  <meta property="og:title" content="SwiftFlow.ai — Build Your Software Business in the AI Era">
+  <meta property="og:description"
+    content="Don't just watch the AI revolution. Build a business with it. Get lifetime access to a complete WhatsApp CRM SaaS platform.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="public/images/logo/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. CSS VARIABLES (DEFAULT FUTURISTIC DARK THEME)
+       ========================================================================== */
+    :root {
+      /* Cyber Dark (Futuristic High-Tech Neon) */
+      --bg-primary: #040714;
+      --bg-secondary: #080d22;
+      --bg-card: rgba(13, 20, 44, 0.75);
+      --bg-card-hover: rgba(22, 33, 72, 0.85);
+      --bg-glass: rgba(15, 23, 52, 0.65);
+      --bg-glass-subtle: rgba(255, 255, 255, 0.03);
+
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-glass: rgba(255, 255, 255, 0.14);
+      --border-glow: rgba(56, 189, 248, 0.4);
+      --border-accent: rgba(217, 70, 239, 0.4);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --text-bright: #ffffff;
+
+      /* Neon Spectrum */
+      --cyan: #38bdf8;
+      --cyan-bright: #00f0ff;
+      --cyan-glow: rgba(56, 189, 248, 0.35);
+      --magenta: #ec4899;
+      --magenta-bright: #ff007f;
+      --magenta-glow: rgba(236, 72, 153, 0.35);
+      --purple: #8b5cf6;
+      --purple-glow: rgba(139, 92, 246, 0.35);
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.3);
+      --whatsapp: #25D366;
+      --whatsapp-glow: rgba(37, 211, 102, 0.3);
+      --amber: #f59e0b;
+      --amber-glow: rgba(245, 158, 11, 0.3);
+
+      /* Gradients */
+      --grad-cyan-purple: linear-gradient(135deg, #38bdf8 0%, #8b5cf6 50%, #ec4899 100%);
+      --grad-neon-pink: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+      --grad-emerald-cyan: linear-gradient(135deg, #10b981 0%, #38bdf8 100%);
+      --grad-surface: linear-gradient(180deg, rgba(17, 24, 52, 0.8) 0%, rgba(9, 13, 30, 0.95) 100%);
+      --grad-button-primary: linear-gradient(135deg, #00f0ff 0%, #7928ca 50%, #ff007f 100%);
+
+      /* Typography */
+      --font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+
+      /* Layout */
+      --max-width: 1240px;
+      --nav-height: 76px;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-full: 9999px;
+
+      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ==========================================================================
+       2. RESET & BASE STYLES
+       ========================================================================== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      min-height: 100vh;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Selection */
+    ::selection {
+      background: rgba(56, 189, 248, 0.3);
+      color: #ffffff;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(56, 189, 248, 0.25);
+      border-radius: var(--radius-full);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(56, 189, 248, 0.6);
+    }
+
+    /* Typography Utilities */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--text-bright);
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-weight: 400;
+      font-size: 1.05rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    code,
+    pre {
+      font-family: var(--font-mono);
+    }
+
+    /* ==========================================================================
+       3. BACKGROUND CANVAS & ATMOSPHERIC EFFECTS
+       ========================================================================== */
+    #cyber-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.55;
+    }
+
+    .ambient-glow {
+      position: fixed;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(140px);
+      z-index: 0;
+      opacity: 0.22;
+    }
+
+    .ambient-glow-cyan {
+      top: -150px;
+      left: 10%;
+      background: radial-gradient(circle, var(--cyan-bright) 0%, transparent 70%);
+    }
+
+    .ambient-glow-magenta {
+      top: 30%;
+      right: -100px;
+      background: radial-gradient(circle, var(--magenta-bright) 0%, transparent 70%);
+    }
+
+    .ambient-glow-purple {
+      bottom: 10%;
+      left: 20%;
+      background: radial-gradient(circle, var(--purple) 0%, transparent 70%);
+    }
+
+    .grid-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 64px 64px;
+      pointer-events: none;
+      z-index: 0;
+      mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 80%);
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Section Wrapper */
+    section {
+      padding: 110px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Badge & Tag Elements */
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--border-glow);
+      background: rgba(56, 189, 248, 0.08);
+      color: var(--cyan);
+      box-shadow: 0 0 20px var(--cyan-glow);
+      backdrop-filter: blur(8px);
+      margin-bottom: 20px;
+    }
+
+    .pill-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--cyan-bright);
+      box-shadow: 0 0 10px var(--cyan-bright);
+      animation: pulseGlow 2s infinite;
+    }
+
+    @keyframes pulseGlow {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(0.85);
+      }
+    }
+
+    /* Gradient Text */
+    .text-gradient {
+      background: var(--grad-cyan-purple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-gradient-pink {
+      background: var(--grad-neon-pink);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-gradient-emerald {
+      background: var(--grad-emerald-cyan);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      max-width: 840px;
+      margin: 0 auto 64px auto;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 18px;
+    }
+
+    .section-header p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Glass Cards */
+    .glass-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-4px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 35px var(--cyan-glow);
+    }
+
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 34px;
+      border-radius: var(--radius-full);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--grad-button-primary);
+      color: #ffffff;
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.4), 0 10px 25px rgba(121, 40, 202, 0.4);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 0 45px rgba(0, 240, 255, 0.6), 0 15px 35px rgba(255, 0, 127, 0.5);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-glass);
+      color: var(--text-primary);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--cyan);
+      color: var(--cyan-bright);
+      box-shadow: 0 0 20px var(--cyan-glow);
+    }
+
+    .btn-sm {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+
+    /* ==========================================================================
+       4. NAVBAR
+       ========================================================================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-height);
+      z-index: 1000;
+      background: rgba(4, 7, 20, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: var(--transition-smooth);
+    }
+
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: var(--grad-button-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 20px var(--cyan-glow);
+    }
+
+    .logo-mark svg {
+      width: 24px;
+      height: 24px;
+      color: #fff;
+    }
+
+    .logo-text {
+      font-size: 1.45rem;
+      font-weight: 800;
+      font-family: var(--font-display);
+      letter-spacing: -0.03em;
+      color: var(--text-bright);
+    }
+
+    .logo-text span {
+      color: var(--cyan-bright);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan-bright);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    /* Mobile / Tablet Menu Toggle */
+    .mobile-menu-toggle {
+      display: none;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-glass);
+      color: var(--text-bright);
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .mobile-menu-toggle:hover {
+      border-color: var(--cyan);
+      color: var(--cyan-bright);
+    }
+
+    /* Mobile / Tablet Drawer */
+    .mobile-nav-drawer {
+      display: none;
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      background: rgba(6, 10, 26, 0.97);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border-glow);
+      padding: 20px 24px 28px 24px;
+      z-index: 999;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-nav-drawer.open {
+      display: flex;
+    }
+
+    .mobile-nav-drawer a.mobile-nav-link {
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 0.98rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mobile-nav-drawer a.mobile-nav-link:hover {
+      border-color: var(--cyan);
+      color: var(--cyan-bright);
+      background: rgba(56, 189, 248, 0.08);
+    }
+
+    /* ==========================================================================
+       5. HERO SECTION
+       ========================================================================== */
+    .hero {
+      padding-top: calc(var(--nav-height) + 60px);
+      padding-bottom: 120px;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 980px;
+      margin: 0 auto 50px auto;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 820px;
+      margin: 0 auto 36px auto;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .hero-meta-badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-meta-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--emerald);
+    }
+
+    /* 3D Dashboard Perspective Display (Inspired by user's uploaded visual) */
+    .hero-dashboard-container {
+      margin-top: 60px;
+      position: relative;
+      perspective: 1400px;
+      padding: 20px 0;
+    }
+
+    .hero-dashboard-mesh {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Ambient neon halo glow behind cards */
+    .hero-dashboard-halo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 70%;
+      background: radial-gradient(ellipse at center, rgba(0, 240, 255, 0.25) 0%, rgba(217, 70, 239, 0.2) 45%, transparent 70%);
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* The Main Showcase Shell */
+    .hero-app-window {
+      position: relative;
+      z-index: 2;
+      background: rgba(10, 16, 38, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius-lg);
+      box-shadow:
+        0 40px 100px -20px rgba(0, 0, 0, 0.8),
+        0 0 50px rgba(56, 189, 248, 0.25),
+        0 0 100px rgba(236, 72, 153, 0.15);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      overflow: hidden;
+      max-width: 1120px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    /* Window Top Bar */
+    .window-header {
+      background: rgba(5, 8, 22, 0.95);
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-glass);
+    }
+
+    .window-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .window-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .window-dot-red {
+      background-color: #ef4444;
+    }
+
+    .window-dot-yellow {
+      background-color: #f59e0b;
+    }
+
+    .window-dot-green {
+      background-color: #10b981;
+    }
+
+    .window-title {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .window-badge-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      color: var(--whatsapp);
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* Inside Hero UI: 3-Column Command Center */
+    .hero-ui-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr 320px;
+      min-height: 520px;
+    }
+
+    /* Sidebar Navigation Mockup */
+    .hero-ui-sidebar {
+      background: rgba(6, 10, 26, 0.95);
+      border-right: 1px solid var(--border-glass);
+      padding: 20px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .hero-ui-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 10px 18px 10px;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 12px;
+    }
+
+    .hero-ui-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: var(--transition-smooth);
+    }
+
+    .hero-ui-nav-item.active {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--cyan-bright);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+    }
+
+    .hero-ui-nav-item svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Main Area: Real-Time WhatsApp Live Chat & AI Automation */
+    .hero-ui-main {
+      padding: 24px;
+      background: rgba(8, 13, 33, 0.85);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hero-stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .hero-stat-card {
+      background: rgba(15, 23, 54, 0.75);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      position: relative;
+    }
+
+    .hero-stat-card .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      font-family: var(--font-mono);
+      margin-bottom: 6px;
+    }
+
+    .hero-stat-card .val {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text-bright);
+      font-family: var(--font-display);
+    }
+
+    .hero-stat-card .trend {
+      font-size: 0.75rem;
+      color: var(--emerald);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    /* Live Chat Simulation Box */
+    .hero-chat-box {
+      background: rgba(12, 19, 46, 0.8);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .chat-bubble-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .chat-user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chat-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--grad-button-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #fff;
+    }
+
+    .chat-msg {
+      max-width: 82%;
+      padding: 12px 16px;
+      border-radius: 14px;
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+
+    .chat-msg-inbound {
+      align-self: flex-start;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      border-bottom-left-radius: 4px;
+    }
+
+    .chat-msg-outbound {
+      align-self: flex-end;
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.25) 0%, rgba(16, 185, 129, 0.3) 100%);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      color: #ffffff;
+      border-bottom-right-radius: 4px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.15);
+    }
+
+    .chat-msg-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      background: rgba(0, 240, 255, 0.2);
+      border: 1px solid var(--cyan);
+      color: var(--cyan-bright);
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      font-family: var(--font-mono);
+    }
+
+    /* Right Column: AI Triage & Automation Insights */
+    .hero-ui-right {
+      background: rgba(6, 10, 26, 0.95);
+      border-left: 1px solid var(--border-glass);
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .triage-card {
+      background: rgba(14, 22, 52, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px;
+    }
+
+    .triage-card-title {
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .triage-flow-node {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.8rem;
+      margin-top: 8px;
+    }
+
+    .flow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      box-shadow: 0 0 8px var(--whatsapp);
+    }
+
+    /* Floating Satellite Glass Cards (Matching user's visual inspiration) */
+    .floating-card-satellite {
+      position: absolute;
+      background: rgba(13, 20, 48, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px var(--cyan-glow);
+      z-index: 10;
+      animation: floatSmooth 6s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .satellite-left {
+      top: 15%;
+      left: -40px;
+      animation-delay: 0s;
+    }
+
+    .satellite-right {
+      bottom: 12%;
+      right: -30px;
+      animation-delay: 3s;
+      border-color: rgba(236, 72, 153, 0.35);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px var(--magenta-glow);
+    }
+
+    @keyframes floatSmooth {
+
+      0%,
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-12px) rotate(1deg);
+      }
+    }
+
+    /* ==========================================================================
+       6. SECTION: THE AI ERA OPPORTUNITY
+       ========================================================================== */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .comparison-card {
+      padding: 40px;
+      border-radius: var(--radius-lg);
+      position: relative;
+    }
+
+    .comparison-card.traditional {
+      background: rgba(15, 23, 42, 0.45);
+      border: 1px solid rgba(239, 68, 68, 0.25);
+    }
+
+    .comparison-card.platform {
+      background: linear-gradient(180deg, rgba(16, 26, 60, 0.85) 0%, rgba(9, 14, 34, 0.95) 100%);
+      border: 1px solid var(--border-glow);
+      box-shadow: 0 0 40px var(--cyan-glow);
+    }
+
+    .comparison-card-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .badge-danger {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #f87171;
+    }
+
+    .badge-success {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--cyan);
+      color: var(--cyan-bright);
+    }
+
+    .comparison-list {
+      list-style: none;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .comparison-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 1rem;
+    }
+
+    .comparison-list li svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .comparison-list.traditional svg {
+      color: #ef4444;
+    }
+
+    .comparison-list.platform svg {
+      color: var(--cyan-bright);
+    }
+
+    .callout-box {
+      margin-top: 40px;
+      background: rgba(56, 189, 248, 0.05);
+      border: 1px dashed var(--border-glow);
+      border-radius: var(--radius-md);
+      padding: 24px 32px;
+      text-align: center;
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+    }
+
+    .callout-box strong {
+      color: var(--cyan-bright);
+    }
+
+    /* ==========================================================================
+       7. SECTION: BECOME A SOLO FOUNDER
+       ========================================================================== */
+    .founder-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+    }
+
+    .pillar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .pillar-card:hover {
+      border-color: var(--cyan);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 30px var(--cyan-glow);
+    }
+
+    .pillar-icon-box {
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid var(--border-glow);
+      color: var(--cyan-bright);
+    }
+
+    .pillar-icon-box.pink {
+      background: rgba(236, 72, 153, 0.1);
+      border-color: var(--border-accent);
+      color: var(--magenta-bright);
+    }
+
+    .pillar-icon-box.purple {
+      background: rgba(139, 92, 246, 0.1);
+      border-color: var(--purple-glow);
+      color: var(--purple);
+    }
+
+    .pillar-icon-box svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .pillar-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .pillar-card p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    /* Founder Mindset Manifesto Box */
+    .manifesto-box {
+      margin-top: 60px;
+      background: linear-gradient(135deg, rgba(17, 24, 60, 0.7) 0%, rgba(22, 16, 44, 0.8) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+    }
+
+    .manifesto-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+    }
+
+    .manifesto-content p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+    }
+
+    /* ==========================================================================
+       8. SECTION: THE TECHNOLOGY IS ALREADY BUILT (INTERACTIVE EXPLORER)
+       ========================================================================== */
+    .tech-explorer-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .tech-nav-tab {
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      color: var(--text-secondary);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tech-nav-tab.active,
+    .tech-nav-tab:hover {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: var(--cyan);
+      color: var(--cyan-bright);
+      box-shadow: 0 0 25px var(--cyan-glow);
+    }
+
+    .tech-nav-tab svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Tech Module Viewer Screen */
+    .tech-viewer-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    }
+
+    .tech-viewer-header {
+      background: rgba(6, 10, 26, 0.95);
+      padding: 16px 28px;
+      border-bottom: 1px solid var(--border-glass);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .tech-viewer-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-bright);
+    }
+
+    .tech-module-pane {
+      display: none;
+      padding: 36px;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .tech-module-pane.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .module-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .module-specs h4 {
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+    }
+
+    .module-specs p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .feature-check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .feature-check-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+    }
+
+    .feature-check-list li svg {
+      color: var(--emerald);
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    /* Simulated Mockup Container */
+    .module-mockup-display {
+      background: rgba(8, 13, 35, 0.9);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Mockup: Inbox Preview */
+    .mock-inbox-wrap {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 14px;
+      min-height: 280px;
+    }
+
+    .mock-inbox-sidebar {
+      border-right: 1px solid var(--border-subtle);
+      padding-right: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mock-chat-item {
+      padding: 8px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.03);
+      font-size: 0.78rem;
+      cursor: pointer;
+    }
+
+    .mock-chat-item.active {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--cyan-bright);
+    }
+
+    /* Mockup: Kanban Board */
+    .mock-kanban-board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .kanban-col {
+      background: rgba(14, 20, 48, 0.6);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .kanban-col-header {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .kanban-card {
+      background: rgba(20, 29, 64, 0.9);
+      border: 1px solid var(--border-glass);
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 0.8rem;
+    }
+
+    .kanban-card-val {
+      color: var(--emerald);
+      font-weight: 700;
+      margin-top: 6px;
+      font-family: var(--font-mono);
+    }
+
+    /* ==========================================================================
+       9. SECTION: HOW YOU CAN BUILD YOUR BUSINESS (4-STEP TIMELINE)
+       ========================================================================== */
+    .timeline-container {
+      position: relative;
+      margin-top: 60px;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 60px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--cyan-bright) 0%, var(--purple) 50%, var(--magenta-bright) 100%);
+      z-index: 0;
+      box-shadow: 0 0 15px var(--cyan-glow);
+    }
+
+    .timeline-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      padding: 32px 22px;
+      text-align: center;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .timeline-step-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--cyan);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px var(--cyan-glow);
+    }
+
+    .step-number-bubble {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 2px solid var(--cyan);
+      color: var(--cyan-bright);
+      font-family: var(--font-mono);
+      font-weight: 800;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px auto;
+      box-shadow: 0 0 25px var(--cyan-glow);
+    }
+
+    .timeline-step-card:nth-child(2) .step-number-bubble {
+      border-color: var(--purple);
+      color: var(--purple);
+      box-shadow: 0 0 25px var(--purple-glow);
+    }
+
+    .timeline-step-card:nth-child(3) .step-number-bubble {
+      border-color: var(--magenta);
+      color: var(--magenta-bright);
+      box-shadow: 0 0 25px var(--magenta-glow);
+    }
+
+    .timeline-step-card:nth-child(4) .step-number-bubble {
+      border-color: var(--emerald);
+      color: var(--emerald);
+      box-shadow: 0 0 25px var(--emerald-glow);
+    }
+
+    .timeline-step-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .timeline-step-card p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       10. SECTION: WHO CAN YOU SERVE? (VERTICAL MARKETS & CALCULATOR)
+       ========================================================================== */
+    .verticals-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .vertical-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+    }
+
+    .vertical-card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    }
+
+    .vertical-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+
+    .vertical-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+    }
+
+    .vertical-pain {
+      background: rgba(239, 68, 68, 0.08);
+      border-left: 3px solid #ef4444;
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-size: 0.88rem;
+      margin-bottom: 14px;
+      color: #fca5a5;
+    }
+
+    .vertical-solution {
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 3px solid var(--emerald);
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-size: 0.88rem;
+      margin-bottom: 20px;
+      color: #a7f3d0;
+    }
+
+    .vertical-pitch-tag {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 14px;
+      font-size: 0.85rem;
+      color: var(--cyan-bright);
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+
+    /* Solo Founder Revenue Potential Calculator */
+    .calculator-wrapper {
+      margin-top: 70px;
+      background: linear-gradient(135deg, rgba(13, 20, 50, 0.85) 0%, rgba(9, 13, 32, 0.95) 100%);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: 0 0 60px rgba(56, 189, 248, 0.2);
+    }
+
+    .calculator-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .slider-group {
+      margin-bottom: 28px;
+    }
+
+    .slider-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .slider-header label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .slider-value-badge {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--cyan-bright);
+      background: rgba(56, 189, 248, 0.15);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 8px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      outline: none;
+      transition: opacity 0.2s;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--cyan-bright);
+      cursor: pointer;
+      box-shadow: 0 0 15px var(--cyan-bright);
+    }
+
+    .calc-results-card {
+      background: rgba(6, 10, 26, 0.95);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .calc-results-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--grad-button-primary);
+    }
+
+    .calc-metric-box {
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .calc-metric-box:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .calc-metric-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      margin-bottom: 6px;
+    }
+
+    .calc-metric-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      font-family: var(--font-display);
+      color: var(--text-bright);
+    }
+
+    .calc-metric-num.highlight {
+      background: var(--grad-cyan-purple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ==========================================================================
+       11. SECTION: WHAT YOU GET
+       ========================================================================== */
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .deliverable-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      position: relative;
+    }
+
+    .deliverable-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .deliverable-card h3 svg {
+      color: var(--cyan);
+      width: 24px;
+      height: 24px;
+    }
+
+    .deliverable-card p {
+      font-size: 0.96rem;
+      margin-bottom: 18px;
+    }
+
+    .transparency-note {
+      margin-top: 48px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px 32px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .transparency-note strong {
+      color: var(--text-primary);
+    }
+
+    /* ==========================================================================
+       12. SECTION: LIFETIME ACCESS OFFER (PRICING)
+       ========================================================================== */
+    .pricing-center-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .pricing-card {
+      background: linear-gradient(180deg, rgba(16, 24, 60, 0.95) 0%, rgba(8, 12, 30, 0.98) 100%);
+      border: 2px solid var(--cyan);
+      border-radius: var(--radius-lg);
+      padding: 56px 48px;
+      position: relative;
+      box-shadow: 0 0 80px rgba(0, 240, 255, 0.25), 0 30px 60px rgba(0, 0, 0, 0.7);
+    }
+
+    .pricing-ribbon {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--grad-button-primary);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 8px 24px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 0 25px rgba(255, 0, 127, 0.5);
+      white-space: nowrap;
+      max-width: calc(100% - 24px);
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .pricing-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .pricing-header h3 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      margin-bottom: 12px;
+    }
+
+    .pricing-price-box {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin: 28px 0 12px 0;
+    }
+
+    .original-price {
+      font-size: clamp(1.15rem, 3vw, 1.5rem);
+      color: var(--text-muted);
+      text-decoration: line-through;
+      font-family: var(--font-mono);
+    }
+
+    .current-price {
+      font-size: clamp(2.6rem, 8vw, 3.8rem);
+      font-weight: 900;
+      color: var(--text-bright);
+      font-family: var(--font-display);
+      line-height: 1;
+    }
+
+    .price-period {
+      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+      color: var(--cyan-bright);
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+
+    .pricing-inclusions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 28px;
+      margin: 36px 0;
+      padding: 32px 0;
+      border-top: 1px solid var(--border-glass);
+      border-bottom: 1px solid var(--border-glass);
+    }
+
+    .inclusion-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+
+    .inclusion-item svg {
+      width: 20px;
+      height: 20px;
+      color: var(--emerald);
+      flex-shrink: 0;
+    }
+
+    .pricing-cta-wrap {
+      text-align: center;
+    }
+
+    .pricing-cta-wrap .btn {
+      width: 100%;
+      max-width: 460px;
+      padding: 20px 36px;
+      font-size: 1.2rem;
+    }
+
+    .guarantee-subtext {
+      margin-top: 18px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       13. SECTION: HANDLE OBJECTIONS (FAQ)
+       ========================================================================== */
+    .faq-accordion-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition-smooth);
+    }
+
+    .faq-item:hover {
+      border-color: var(--border-glow);
+    }
+
+    .faq-question {
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .faq-question h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin: 0;
+    }
+
+    .faq-toggle-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cyan);
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-toggle-icon {
+      transform: rotate(180deg);
+      background: rgba(56, 189, 248, 0.2);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+      padding: 0 28px;
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+      padding: 0 28px 24px 28px;
+    }
+
+    /* ==========================================================================
+       14. FINAL CTA SECTION
+       ========================================================================== */
+    .final-cta {
+      padding: 120px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .final-cta-card {
+      background: linear-gradient(135deg, rgba(17, 24, 60, 0.95) 0%, rgba(9, 13, 30, 0.98) 100%);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-lg);
+      padding: 80px 48px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 100px rgba(56, 189, 248, 0.2);
+    }
+
+    .final-cta-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(0, 240, 255, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      margin-bottom: 20px;
+    }
+
+    .final-cta p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: 0 auto 40px auto;
+    }
+
+    /* ==========================================================================
+       15. FOOTER
+       ========================================================================== */
+    .footer {
+      background: rgba(4, 7, 20, 0.98);
+      border-top: 1px solid var(--border-subtle);
+      padding: 60px 0 30px 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      margin-top: 12px;
+      max-width: 320px;
+    }
+
+    .footer-col h5 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col a:hover {
+      color: var(--cyan-bright);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .meta-disclaimer {
+      margin-top: 20px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       15B. LIVE DEMO VIDEO SHOWCASE & FOUNDER TESTIMONIALS
+       ========================================================================== */
+    .video-showcase-card {
+      background: rgba(8, 13, 35, 0.9);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.75), 0 0 60px rgba(56, 189, 248, 0.2);
+      margin-bottom: 56px;
+      position: relative;
+    }
+
+    .video-player-stage {
+      position: relative;
+      background: #02040c;
+      width: 100%;
+      aspect-ratio: 16 / 8.5;
+      max-height: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .video-player-stage video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #02040c;
+    }
+
+    .video-play-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(4, 7, 20, 0.35) 0%, rgba(4, 7, 20, 0.72) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      z-index: 4;
+    }
+
+    .video-play-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .video-play-btn-circle {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: var(--grad-button-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      box-shadow: 0 0 40px rgba(0, 240, 255, 0.55), 0 0 70px rgba(255, 0, 127, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .video-play-overlay:hover .video-play-btn-circle {
+      transform: scale(1.1);
+    }
+
+    .video-controls-bar {
+      background: rgba(6, 10, 26, 0.96);
+      border-top: 1px solid var(--border-glass);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .video-control-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .video-ctrl-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      padding: 7px 14px;
+      border-radius: var(--radius-full);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-smooth);
+    }
+
+    .video-ctrl-btn:hover,
+    .video-ctrl-btn.active {
+      background: rgba(56, 189, 248, 0.16);
+      border-color: var(--cyan);
+      color: var(--cyan-bright);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+    }
+
+    /* Founder Stories / Testimonials */
+    .founders-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .founder-story-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition-smooth);
+    }
+
+    .founder-story-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--grad-cyan-purple);
+      opacity: 0.75;
+    }
+
+    .founder-story-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-glow);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55), 0 0 35px var(--cyan-glow);
+    }
+
+    .founder-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .founder-identity {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .founder-avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--grad-button-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+      flex-shrink: 0;
+    }
+
+    .founder-name {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: var(--text-bright);
+      margin-bottom: 2px;
+    }
+
+    .founder-title-brand {
+      font-size: 0.88rem;
+      color: var(--cyan-bright);
+      font-weight: 600;
+    }
+
+    .founder-verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: var(--emerald);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .founder-journey-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      font-family: var(--font-mono);
+    }
+
+    .founder-journey-pill strong {
+      color: var(--magenta-bright);
+    }
+
+    .founder-quote {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: var(--text-primary);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .founder-metrics-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .founder-metric-chip {
+      background: rgba(6, 10, 26, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      text-align: center;
+    }
+
+    .founder-metric-chip .m-val {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--emerald);
+    }
+
+    .founder-metric-chip .m-lbl {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* ==========================================================================
+       16. RESPONSIVE DESIGN BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1100px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: inline-flex;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-ui-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-ui-sidebar,
+      .hero-ui-right {
+        display: none;
+      }
+
+      .comparison-grid,
+      .founder-pillars-grid,
+      .timeline-steps-grid,
+      .verticals-grid,
+      .deliverables-grid,
+      .calculator-grid,
+      .founders-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-line {
+        display: none;
+      }
+
+      .module-content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .satellite-left,
+      .satellite-right {
+        display: none;
+      }
+
+      .manifesto-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+
+      /* Window Top Bar (Hero & Video Showcase) */
+      .window-header {
+        flex-wrap: wrap;
+        gap: 8px 12px;
+        padding: 12px 14px;
+      }
+
+      .window-title {
+        order: 3;
+        flex-basis: 100%;
+        font-size: 0.74rem;
+        line-height: 1.4;
+      }
+
+      .window-badge-meta {
+        white-space: nowrap;
+        font-size: 0.7rem;
+        padding: 3px 10px;
+      }
+
+      /* Hero Dashboard Mobile Fixes */
+      .hero-app-window {
+        border-radius: var(--radius-md);
+      }
+
+      .hero-ui-main {
+        padding: 14px;
+        gap: 14px;
+      }
+
+      .hero-stats-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .hero-stat-card {
+        padding: 12px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .hero-stat-card .label {
+        flex-basis: 100%;
+        margin-bottom: 2px;
+      }
+
+      .hero-stat-card .val {
+        font-size: 1.35rem;
+      }
+
+      .hero-chat-box {
+        padding: 12px;
+        gap: 10px;
+      }
+
+      .chat-bubble-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .chat-msg {
+        max-width: 94%;
+        padding: 10px 12px;
+        font-size: 0.82rem;
+      }
+
+      /* Video Player Mobile Fixes */
+      .video-player-stage {
+        aspect-ratio: 16 / 9;
+        min-height: 210px;
+      }
+
+      .video-play-btn-circle {
+        width: 58px;
+        height: 58px;
+      }
+
+      .video-play-btn-circle svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .video-controls-bar {
+        padding: 12px 14px;
+        justify-content: center;
+      }
+
+      /* Tech Module Explorer Mobile Fixes */
+      .tech-viewer-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 14px 16px;
+      }
+
+      .tech-viewer-title {
+        font-size: 0.95rem;
+      }
+
+      .tech-module-pane {
+        padding: 20px 14px;
+      }
+
+      .module-mockup-display {
+        padding: 14px;
+      }
+
+      .mock-inbox-wrap {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .mock-inbox-sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+        padding-right: 0;
+        padding-bottom: 12px;
+      }
+
+      .mock-kanban-board {
+        grid-template-columns: 1fr;
+      }
+
+      /* Pricing Card Mobile Fixes */
+
+      .pricing-card {
+        padding: 46px 18px 32px 18px;
+      }
+
+      .pricing-ribbon {
+        font-size: 0.7rem;
+        padding: 6px 14px;
+        top: -14px;
+      }
+
+      .price-period {
+        flex-basis: 100%;
+        text-align: center;
+      }
+
+      .pricing-inclusions-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 24px 0;
+        margin: 24px 0;
+      }
+
+      /* Other Grids */
+
+      .founder-metrics-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .calculator-wrapper {
+        padding: 28px 18px;
+      }
+
+      .final-cta-card {
+        padding: 48px 20px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      :root {
+        --nav-height: 68px;
+      }
+
+      .logo-mark {
+        width: 34px;
+        height: 34px;
+      }
+
+      .logo-text {
+        font-size: 1.2rem;
+      }
+
+      .nav-cta-btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+      }
+
+      .founder-story-card {
+        padding: 24px 18px;
+      }
+
+      .btn {
+        padding: 14px 22px;
+        font-size: 0.95rem;
+      }
+
+      .hero-cta-group .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background Cyber Canvas for Neon Flowing Mesh -->
+  <canvas id="cyber-canvas"></canvas>
+
+  <!-- Atmospheric Glow Halos -->
+  <div class="ambient-glow ambient-glow-cyan"></div>
+  <div class="ambient-glow ambient-glow-magenta"></div>
+  <div class="ambient-glow ambient-glow-purple"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- ==========================================================================
+       NAVBAR
+       ========================================================================== -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="logo-container">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <div class="logo-text">SwiftFlow<span>.ai</span></div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#opportunity">AI Opportunity</a></li>
+        <li><a href="#live-demo">Live Demo</a></li>
+        <li><a href="#technology">Platform</a></li>
+        <li><a href="#founder-stories">Founder Stories</a></li>
+        <li><a href="#pricing">Lifetime Access</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#pricing" class="btn btn-primary btn-sm nav-cta-btn">Get Access</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu"
+          aria-expanded="false">
+          <svg id="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile / Tablet Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <a href="#opportunity" class="mobile-nav-link">The AI Opportunity <span>→</span></a>
+    <a href="#live-demo" class="mobile-nav-link">Watch Working App Demo <span>→</span></a>
+    <a href="#technology" class="mobile-nav-link">Platform Modules <span>→</span></a>
+    <a href="#verticals" class="mobile-nav-link">SaaS Revenue Simulator <span>→</span></a>
+    <a href="#founder-stories" class="mobile-nav-link">Founder Stories <span>→</span></a>
+    <a href="#pricing" class="mobile-nav-link">Lifetime Access Offer <span>→</span></a>
+    <a href="#faq" class="mobile-nav-link">FAQ &amp; Objections <span>→</span></a>
+    <a href="#pricing" class="btn btn-primary" style="width: 100%; margin-top: 8px;">GET MY SAAS PLATFORM</a>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 3: HERO SECTION
+       ========================================================================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="pill-badge">
+          <span class="dot"></span>
+          AI Era Solo Founder Opportunity • Lifetime Access
+        </div>
+
+        <h1 class="hero-title">
+          DON'T JUST WATCH THE AI REVOLUTION.<br>
+          <span class="text-gradient">BUILD A BUSINESS WITH IT.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Your opportunity to become a solo founder starts here. Get access to a ready-made WhatsApp CRM SaaS platform
+          and start building your own software-based business without developing everything from scratch.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#pricing" class="btn btn-primary">
+            GET MY SAAS PLATFORM
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#opportunity" class="btn btn-secondary">
+            EXPLORE THE OPPORTUNITY
+          </a>
+          <a href="#live-demo" class="btn btn-secondary"
+            style="border-color: rgba(56, 189, 248, 0.4); color: var(--cyan-bright);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            WATCH WORKING APP
+          </a>
+        </div>
+
+        <div class="hero-meta-badges">
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Lifetime License Access</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>One-Time Payment • Zero Royalties</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Official Meta WhatsApp Cloud API</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Futuristic Dashboard Mockup Shell (Styled like uploaded inspiration) -->
+      <div class="hero-dashboard-container" id="hero-dashboard">
+        <div class="hero-dashboard-halo"></div>
+
+        <!-- Floating Satellite Card 1 (Analytics preview) -->
+        <div class="floating-card-satellite satellite-left">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <span
+              style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#25D366; box-shadow:0 0 10px #25D366;"></span>
+            <span
+              style="font-size:0.75rem; font-family:var(--font-mono); color:var(--cyan); text-transform:uppercase;">Meta
+              Cloud API Live</span>
+          </div>
+          <div style="font-size:1.15rem; font-weight:800; color:#fff;">98% Open Rate</div>
+          <div style="font-size:0.75rem; color:var(--emerald);">403 hrs/mo Saved Per Client</div>
+        </div>
+
+        <!-- Floating Satellite Card 2 (Solo Founder MRR preview) -->
+        <div class="floating-card-satellite satellite-right">
+          <div
+            style="font-size:0.75rem; font-family:var(--font-mono); color:var(--magenta-bright); text-transform:uppercase;">
+            Solo Founder Retainer Model</div>
+          <div style="font-size:1.25rem; font-weight:800; color:#fff;">₹49,999 Setup + ₹9,999/mo</div>
+          <div style="font-size:0.75rem; color:var(--text-secondary);">Enterprise Client Model Ready</div>
+        </div>
+
+        <div class="hero-dashboard-mesh">
+          <div class="hero-app-window">
+            <!-- Window Bar -->
+            <div class="window-header">
+              <div class="window-controls">
+                <span class="window-dot window-dot-red"></span>
+                <span class="window-dot window-dot-yellow"></span>
+                <span class="window-dot window-dot-green"></span>
+              </div>
+              <div class="window-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                SwiftFlow.ai v2.4 Enterprise — Production Admin Console
+              </div>
+              <div class="window-badge-meta">
+                <span style="width:6px; height:6px; border-radius:50%; background:currentColor;"></span>
+                Meta Verified Cloud API
+              </div>
+            </div>
+
+            <!-- UI Body Grid -->
+            <div class="hero-ui-grid">
+              <!-- Sidebar -->
+              <div class="hero-ui-sidebar">
+                <div class="hero-ui-brand">
+                  <div class="logo-mark" style="width:28px; height:28px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                  </div>
+                  <span style="font-weight:700; font-size:0.95rem; color:#fff;">SwiftFlow CRM</span>
+                </div>
+                <div class="hero-ui-nav-item active">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <span>Shared Team Inbox</span>
+                </div>
+                <div class="hero-ui-nav-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                  <span>Automation Flows</span>
+                </div>
+                <div class="hero-ui-nav-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                  <span>Deals Kanban (₹)</span>
+                </div>
+                <div class="hero-ui-nav-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span>Healthcare & Clinic</span>
+                </div>
+                <div class="hero-ui-nav-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                  </svg>
+                  <span>Bulk Broadcasts</span>
+                </div>
+              </div>
+
+              <!-- Main Center: Live Chat & Metrics -->
+              <div class="hero-ui-main">
+                <div class="hero-stats-row">
+                  <div class="hero-stat-card">
+                    <div class="label">Total Conversations</div>
+                    <div class="val">18,492</div>
+                    <div class="trend">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                      </svg>
+                      +42% this month
+                    </div>
+                  </div>
+                  <div class="hero-stat-card">
+                    <div class="label">Avg Response Time</div>
+                    <div class="val" style="color:var(--cyan-bright);">1.8s</div>
+                    <div class="trend" style="color:var(--cyan);">
+                      Instant AI Triage
+                    </div>
+                  </div>
+                  <div class="hero-stat-card">
+                    <div class="label">Pipeline Value</div>
+                    <div class="val" style="color:var(--emerald);">₹14.8L</div>
+                    <div class="trend">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                      </svg>
+                      88 closed deals
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-chat-box">
+                  <div class="chat-bubble-header">
+                    <div class="chat-user-info">
+                      <div class="chat-avatar">RK</div>
+                      <div>
+                        <div style="font-weight:700; font-size:0.9rem; color:#fff;">Rajesh Kumar (+91 98201 XXXXX)</div>
+                        <div style="font-size:0.75rem; color:var(--emerald);">● Online • Tag: Healthcare Clinic Lead
+                        </div>
+                      </div>
+                    </div>
+                    <span class="chat-msg-badge">AI Autonomous Triage</span>
+                  </div>
+
+                  <div class="chat-msg chat-msg-inbound">
+                    Hi, I saw your clinic ad. Do you have an appointment available with Dr. Mehta for cardiology
+                    tomorrow afternoon?
+                  </div>
+
+                  <div class="chat-msg chat-msg-outbound">
+                    <div class="chat-msg-badge"
+                      style="background:rgba(255,255,255,0.15); border-color:#fff; color:#fff;">SwiftFlow AI Agent</div>
+                    <br>
+                    Hello Rajesh! Yes, Dr. Mehta has 2 slots open tomorrow:<br>
+                    1️⃣ 3:30 PM &nbsp;&nbsp;&nbsp; 2️⃣ 5:15 PM<br><br>
+                    Reply with <strong>1</strong> or <strong>2</strong> to instantly confirm your booking. Our automated
+                    WhatsApp reminder will be sent 24h & 2h before your visit.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Sidebar: Live Engine Details -->
+              <div class="hero-ui-right">
+                <div class="triage-card">
+                  <div class="triage-card-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 14 14"></polyline>
+                    </svg>
+                    AUTOMATED CRON JOBS
+                  </div>
+                  <div style="font-size:0.82rem; color:var(--text-secondary);">24h, 4h & 2h WhatsApp reminders running
+                    on auto-pilot. Missed visits reduced to &lt; 5%.</div>
+                </div>
+
+                <div class="triage-card">
+                  <div class="triage-card-title">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    CLIENT ARPU STRATEGY
+                  </div>
+                  <div class="triage-flow-node">
+                    <span class="flow-dot"></span>
+                    <span>Clinic Setup: <strong>₹49,999</strong></span>
+                  </div>
+                  <div class="triage-flow-node">
+                    <span class="flow-dot" style="background:var(--cyan); box-shadow:0 0 8px var(--cyan);"></span>
+                    <span>Monthly Retainer: <strong>₹9,999/mo</strong></span>
+                  </div>
+                </div>
+
+                <div class="triage-card"
+                  style="margin-top:auto; background:rgba(56,189,248,0.06); border-color:var(--border-glow);">
+                  <div
+                    style="font-size:0.75rem; color:var(--cyan); font-family:var(--font-mono); text-transform:uppercase;">
+                    Solo Founder Status</div>
+                  <div style="font-size:0.95rem; font-weight:700; color:#fff; margin-top:4px;">100% Whitelabel Ready
+                  </div>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">Deploy on your own domain in
+                    20 minutes.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: THE AI ERA OPPORTUNITY
+       ========================================================================== */
+  -->
+  <section id="opportunity">
+    <div class="container">
+      <div class="section-header">
+        <div class="pill-badge">The Paradigm Shift</div>
+        <h2>THE RULES OF BUILDING A BUSINESS <span class="text-gradient">HAVE CHANGED.</span></h2>
+        <p>
+          In the past, launching a software company required ₹20+ Lakhs in capital, an army of senior software
+          engineers, and 12 months of development. Modern AI and battle-tested platforms have rewritten the playbook.
+          Solo founders can now deploy enterprise-grade tech on day one.
+        </p>
+      </div>
+
+      <div class="comparison-grid">
+        <!-- Traditional Approach -->
+        <div class="comparison-card traditional">
+          <span class="comparison-card-badge badge-danger">THE OLD WAY — BUILDING FROM ZERO</span>
+          <h3 style="font-size: 1.6rem; margin-bottom: 12px; color: #fff;">Developing From Scratch</h3>
+          <p style="font-size: 0.95rem;">High risk, months of delay, and exhausting technical maintenance.</p>
+
+          <ul class="comparison-list traditional">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              <span><strong>6 to 12 Months of Coding:</strong> Wasting months writing databases, authentication, and
+                integrations.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              <span><strong>Heavy Financial Burden:</strong> ₹10L–₹25L paid to development agencies before making your
+                first sale.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              <span><strong>API Compliance Nightmares:</strong> Navigating Meta's strict WhatsApp Cloud API token
+                systems and webhooks alone.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              <span><strong>Exhausted Energy:</strong> By the time the software is built, you run out of energy to do
+                sales or market to clients.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Platform-Based Solo Founder Approach -->
+        <div class="comparison-card platform">
+          <span class="comparison-card-badge badge-success">THE AI ERA WAY — PLATFORM-POWERED</span>
+          <h3 style="font-size: 1.6rem; margin-bottom: 12px; color: #fff;">Solo Founder with SwiftFlow.ai</h3>
+          <p style="font-size: 0.95rem;">Start with production software. Focus 100% of your energy on client
+            acquisition.</p>
+
+          <ul class="comparison-list platform">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Deploy on Day One:</strong> Get the complete, fully built Next.js 15 & Supabase platform
+                ready to run.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Zero Development Costs:</strong> Skip hiring programmers. You own lifetime access with a
+                single low investment.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Official Meta Cloud API Architecture:</strong> Enterprise AES-256 token security and
+                Supabase Realtime already wired up.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Direct Focus on Revenue:</strong> Spend your time understanding local business pain points
+                and signing high-ticket retainers.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout-box">
+        <strong>Important Founder Principle:</strong> Having software ready doesn't eliminate the real work of
+        entrepreneurship. You still need to speak with businesses, understand their bottlenecks, customize their
+        workflows, and provide great customer support. What SwiftFlow.ai does is eliminate the 12-month technical
+        barrier that stops 99% of people from starting.
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: BECOME A SOLO FOUNDER
+       ========================================================================== -->
+  <section id="solo-founder" style="background: rgba(8, 12, 30, 0.5);">
+    <div class="container">
+      <div class="section-header">
+        <div class="pill-badge"
+          style="border-color:var(--magenta-glow); color:var(--magenta-bright); background:rgba(236,72,153,0.08);">
+          Independence & Autonomy
+        </div>
+        <h2>ONE PERSON. ONE PLATFORM. <span class="text-gradient-pink">YOUR OWN BUSINESS.</span></h2>
+        <p>
+          You don't need a 20-person startup to build a serious software company. In the AI era, leverage comes from
+          having enterprise infrastructure that lets a single driven entrepreneur serve dozens of paying business
+          clients.
+        </p>
+      </div>
+
+      <div class="founder-pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3>Ready-Made Software</h3>
+          <p>
+            No mockups or prototypes. SwiftFlow.ai is a fully functional, production-tested SaaS codebase equipped with
+            authentication, role management, database schema, and Meta Cloud API integration.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box pink">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+          </div>
+          <h3>WhatsApp Is Where Business Lives</h3>
+          <p>
+            Over 500 million active users in India alone use WhatsApp daily. Email open rates hover around 10%, while
+            WhatsApp delivers <strong>98% open rates</strong> and 50%+ response rates. Businesses are desperate for
+            automation here.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>Recurring Retainer Model</h3>
+          <p>
+            Position yourself as the technology partner. Charge ₹49,999 to ₹49,999 for initial WhatsApp workflow setup,
+            plus ₹4,999 to ₹9,999/month for ongoing support, AI updates, and server maintenance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Manifesto Box -->
+      <div class="manifesto-box">
+        <div class="manifesto-content">
+          <h3>The Solo Founder Mindset in 2026</h3>
+          <p>
+            The old way celebrated headcount and venture capital burn rates. The AI era celebrates lean solo operators
+            who use high-leverage software assets to generate high-margin cashflow with zero bureaucratic drag.
+          </p>
+        </div>
+        <a href="#technology" class="btn btn-secondary" style="flex-shrink: 0;">
+          Inspect The Platform
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: THE TECHNOLOGY IS ALREADY BUILT
+       ========================================================================== -->
+  <section id="technology">
+    <div class="container">
+      <div class="section-header">
+        <div class="pill-badge">Verified Product Modules & Live Walkthrough</div>
+        <h2>WE BUILT THE TECHNOLOGY. <span class="text-gradient">YOU BUILD THE BUSINESS.</span></h2>
+        <p>
+          Take a look inside SwiftFlow.ai. Watch the live screen recording of the actual working software below—then
+          explore every module included in your lifetime platform.
+        </p>
+      </div>
+
+      <!-- LIVE WORKING APPLICATION RECORDING SHOWCASE -->
+      <div class="video-showcase-card" id="live-demo">
+        <div class="window-header">
+          <div class="window-controls">
+            <span class="window-dot window-dot-red"></span>
+            <span class="window-dot window-dot-yellow"></span>
+            <span class="window-dot window-dot-green"></span>
+          </div>
+          <div class="window-title">
+            <span
+              style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#ef4444; box-shadow:0 0 8px #ef4444; animation:pulseGlow 1.5s infinite;"></span>
+            LIVE APPLICATION WALKTHROUGH — UNEDITED SCREEN RECORDING (3:11)
+          </div>
+          <div class="window-badge-meta">
+            3456×1740 Retina Capture
+          </div>
+        </div>
+
+        <div class="video-player-stage">
+          <video id="swiftflow-demo-video" controls preload="metadata" playsinline>
+            <source src="public/videos/Recording.mp4" type="video/mp4">
+            <source src="public/videos/Recording.mov" type="video/quicktime">
+            <source src="videos/Recording.mp4" type="video/mp4">
+            <source src="videos/Recording.mov" type="video/quicktime">
+            <source src="../Recording.mov" type="video/quicktime">
+            Your browser does not support HTML5 video playback.
+          </video>
+
+          <div class="video-play-overlay" id="video-play-overlay">
+            <div class="video-play-btn-circle">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor" style="margin-left:4px;">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:var(--font-display); font-weight:800; font-size:1.25rem; color:#fff;">
+                Watch SwiftFlow.ai Working Live
+              </div>
+              <div style="font-family:var(--font-mono); font-size:0.82rem; color:var(--cyan-bright); margin-top:4px;">
+                Click to play full 3-minute software walkthrough
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-controls-bar">
+          <div class="video-control-group">
+            <button class="video-ctrl-btn" id="btn-vid-toggle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              Play / Pause
+            </button>
+            <button class="video-ctrl-btn" id="btn-vid-restart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+              Restart
+            </button>
+            <button class="video-ctrl-btn" id="btn-vid-fullscreen">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
+              </svg>
+              Fullscreen
+            </button>
+          </div>
+
+          <div class="video-control-group">
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">Playback
+              Speed:</span>
+            <button class="video-ctrl-btn speed-btn active" data-speed="1">1x</button>
+            <button class="video-ctrl-btn speed-btn" data-speed="1.25">1.25x</button>
+            <button class="video-ctrl-btn speed-btn" data-speed="1.5">1.5x</button>
+            <button class="video-ctrl-btn speed-btn" data-speed="2">2x</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Tab Navigator -->
+      <div class="tech-explorer-nav">
+        <button class="tech-nav-tab active" data-tab="tab-inbox">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          Shared Team Inbox
+        </button>
+        <button class="tech-nav-tab" data-tab="tab-flows">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          Automation Flows & Drips
+        </button>
+        <button class="tech-nav-tab" data-tab="tab-crm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          Kanban Pipeline (₹)
+        </button>
+        <button class="tech-nav-tab" data-tab="tab-healthcare">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Healthcare & Auto-Booking
+        </button>
+        <button class="tech-nav-tab" data-tab="tab-broadcast">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          Broadcasts & Meta Sync
+        </button>
+        <button class="tech-nav-tab" data-tab="tab-admin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
+          </svg>
+          Super Admin Console
+        </button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="tech-viewer-wrapper">
+        <div class="tech-viewer-header">
+          <div class="tech-viewer-title" id="module-viewer-title">
+            <span
+              style="display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--cyan); box-shadow:0 0 10px var(--cyan);"></span>
+            Module: Shared Team Inbox & Multi-Agent Realtime Hub
+          </div>
+          <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted);">
+            Supabase WebSockets • AES-256 Encrypted
+          </div>
+        </div>
+
+        <!-- PANE 1: Shared Team Inbox -->
+        <div class="tech-module-pane active" id="tab-inbox">
+          <div class="module-content-grid">
+            <div class="module-specs">
+              <h4>Shared Team WhatsApp Inbox</h4>
+              <p>
+                Eliminates the mess of staff passing around a single office smartphone. Give your client's team a
+                unified web console where 5, 10, or 20 agents can answer incoming WhatsApp messages simultaneously
+                without collisions.
+              </p>
+              <ul class="feature-check-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Real-time message streaming via Supabase Realtime</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Multi-agent assignment & private internal notes</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Custom tags (Hot Lead, Follow Up, Payment Pending)</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Quick reply snippet library for repetitive queries</li>
+              </ul>
+            </div>
+            <div class="module-mockup-display">
+              <div class="mock-inbox-wrap">
+                <div class="mock-inbox-sidebar">
+                  <div class="mock-chat-item active">
+                    <strong>Pooja Sharma</strong>
+                    <div style="font-size:0.7rem; color:var(--cyan);">Inquiry: Root Canal</div>
+                  </div>
+                  <div class="mock-chat-item">
+                    <strong>Vikram Joshi</strong>
+                    <div style="font-size:0.7rem; color:var(--text-muted);">Quote sent (₹45,000)</div>
+                  </div>
+                  <div class="mock-chat-item">
+                    <strong>Ananya Das</strong>
+                    <div style="font-size:0.7rem; color:var(--text-muted);">Follow-up tomorrow</div>
+                  </div>
+                </div>
+                <div style="display:flex; flex-direction:column; justify-content:space-between;">
+                  <div style="display:flex; flex-direction:column; gap:10px;">
+                    <div class="chat-msg chat-msg-inbound" style="font-size:0.8rem;">
+                      What is the cost for dental aligners at your clinic?
+                    </div>
+                    <div class="chat-msg chat-msg-outbound" style="font-size:0.8rem;">
+                      Hi Pooja! Our clear aligner treatment starts at ₹45,000 with easy zero-interest EMI. Would you
+                      like a free 3D digital scan this Saturday?
+                    </div>
+                  </div>
+                  <div
+                    style="margin-top:14px; padding-top:8px; border-top:1px solid var(--border-subtle); display:flex; gap:8px;">
+                    <span
+                      style="font-size:0.7rem; padding:3px 8px; border-radius:4px; background:rgba(255,255,255,0.05); color:var(--text-muted);">Assigned
+                      to: Dr. Rohit (Admin)</span>
+                    <span
+                      style="font-size:0.7rem; padding:3px 8px; border-radius:4px; background:rgba(37,211,102,0.15); color:var(--whatsapp);">Tag:
+                      Warm Lead</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 2: Automation Flows -->
+        <div class="tech-module-pane" id="tab-flows">
+          <div class="module-content-grid">
+            <div class="module-specs">
+              <h4>Visual Automation Flow Builder & Drip Sequences</h4>
+              <p>
+                Build intelligent 24/7 conversational trees triggered by keywords, ads, or manual status changes.
+                Automatically qualify prospects, collect email/name, deliver digital brochures, and book consultations.
+              </p>
+              <ul class="feature-check-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Inbound keyword triggers (e.g. "MENU", "PRICE", "APPLY")</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Smart conditional branching based on customer input</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Multi-day drip sequences for nurturing unclosed prospects</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Webhook payload routing for external CRMs or Zapier</li>
+              </ul>
+            </div>
+            <div class="module-mockup-display">
+              <div style="display:flex; flex-direction:column; gap:12px;">
+                <div
+                  style="background:rgba(56,189,248,0.1); border:1px solid var(--cyan); border-radius:8px; padding:12px;">
+                  <span style="font-size:0.72rem; font-family:var(--font-mono); color:var(--cyan);">TRIGGER NODE</span>
+                  <div style="font-size:0.85rem; font-weight:700; color:#fff; margin-top:4px;">Inbound WhatsApp contains
+                    "APPOINTMENT"</div>
+                </div>
+                <div style="text-align:center; color:var(--text-muted); font-size:1.2rem;">↓</div>
+                <div
+                  style="background:rgba(139,92,246,0.1); border:1px solid var(--purple); border-radius:8px; padding:12px;">
+                  <span style="font-size:0.72rem; font-family:var(--font-mono); color:var(--purple);">AI DECISION /
+                    TRIAGE</span>
+                  <div style="font-size:0.85rem; font-weight:700; color:#fff; margin-top:4px;">Query Available Doctor
+                    Time Slots via API</div>
+                </div>
+                <div style="text-align:center; color:var(--text-muted); font-size:1.2rem;">↓</div>
+                <div
+                  style="background:rgba(16,185,129,0.1); border:1px solid var(--emerald); border-radius:8px; padding:12px;">
+                  <span style="font-size:0.72rem; font-family:var(--font-mono); color:var(--emerald);">ACTION
+                    NODE</span>
+                  <div style="font-size:0.85rem; font-weight:700; color:#fff; margin-top:4px;">Send WhatsApp Template
+                    with 1-Click Interactive Buttons</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 3: Kanban CRM Pipeline -->
+        <div class="tech-module-pane" id="tab-crm">
+          <div class="module-content-grid">
+            <div class="module-specs">
+              <h4>Visual Sales Funnel & Kanban Deals (₹ INR Native)</h4>
+              <p>
+                Track every lead from initial hello to paid invoice. Native Indian Rupee (`₹`) calculations provide
+                instant clarity on pipeline revenue, deal stages, and conversion bottlenecks.
+              </p>
+              <ul class="feature-check-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Drag-and-drop deal columns (New Lead, Pitch, Won, Lost)</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Full INR (₹) native metric tracking</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Complete conversation activity timeline on deal cards</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Auto-status updates triggered by WhatsApp responses</li>
+              </ul>
+            </div>
+            <div class="module-mockup-display">
+              <div class="mock-kanban-board">
+                <div class="kanban-col">
+                  <div class="kanban-col-header">
+                    <span>QUALIFIED</span>
+                    <span>3 Leads</span>
+                  </div>
+                  <div class="kanban-card">
+                    <strong>Apex Dental Care</strong>
+                    <div style="font-size:0.75rem; color:var(--text-muted);">Clinic Automation</div>
+                    <div class="kanban-card-val">₹49,999</div>
+                  </div>
+                  <div class="kanban-card">
+                    <strong>FitPro Gym Studio</strong>
+                    <div style="font-size:0.75rem; color:var(--text-muted);">Renewal Drips</div>
+                    <div class="kanban-card-val">₹49,999</div>
+                  </div>
+                </div>
+                <div class="kanban-col">
+                  <div class="kanban-col-header">
+                    <span>PROPOSAL SENT</span>
+                    <span>2 Leads</span>
+                  </div>
+                  <div class="kanban-card">
+                    <strong>City Eye Hospital</strong>
+                    <div style="font-size:0.75rem; color:var(--text-muted);">Full Suite Setup</div>
+                    <div class="kanban-card-val">₹1,75,000</div>
+                  </div>
+                </div>
+                <div class="kanban-col" style="border-color:rgba(16,185,129,0.3);">
+                  <div class="kanban-col-header" style="color:var(--emerald);">
+                    <span>WON / ACTIVE</span>
+                    <span>5 Clients</span>
+                  </div>
+                  <div class="kanban-card" style="border-color:rgba(16,185,129,0.4);">
+                    <strong>Zenith Academy</strong>
+                    <div style="font-size:0.75rem; color:var(--text-muted);">Retainer Active</div>
+                    <div class="kanban-card-val" style="color:var(--emerald);">₹9,999/mo</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 4: Healthcare & Appointments -->
+        <div class="tech-module-pane" id="tab-healthcare">
+          <div class="module-content-grid">
+            <div class="module-specs">
+              <h4>Healthcare Suite & Automated Appointment Reminders</h4>
+              <p>
+                The ultimate high-ticket niche solution. Indian clinics lose up to 35% of revenue to missed
+                appointments. SwiftFlow.ai manages doctor rosters, auto-schedules visits, and fires automated
+                <strong>24h, 4h & 2h WhatsApp reminders</strong> via cron.
+              </p>
+              <ul class="feature-check-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Clinic, Doctor, and Staff roster management</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Automated multi-stage reminders (24h, 4h & 2h)</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Digital intake triage & symptom logging before arrival</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Automated Google Review & feedback drip post-consultation</li>
+              </ul>
+            </div>
+            <div class="module-mockup-display">
+              <div
+                style="background:rgba(13,22,50,0.8); border:1px solid var(--border-subtle); border-radius:8px; padding:16px;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+                  <span style="font-size:0.8rem; font-weight:700; color:#fff;">Dr. Vivek Desai (Orthopedic)</span>
+                  <span style="font-size:0.75rem; color:var(--emerald); font-family:var(--font-mono);">TODAY: 14
+                    SLOTS</span>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:8px;">
+                  <div
+                    style="display:flex; justify-content:space-between; padding:8px 10px; background:rgba(255,255,255,0.04); border-radius:4px; font-size:0.78rem;">
+                    <span>11:00 AM • Ramesh Verma</span>
+                    <span style="color:var(--emerald);">✔ 2h Reminder Delivered</span>
+                  </div>
+                  <div
+                    style="display:flex; justify-content:space-between; padding:8px 10px; background:rgba(255,255,255,0.04); border-radius:4px; font-size:0.78rem;">
+                    <span>11:30 AM • Sunita Patel</span>
+                    <span style="color:var(--cyan);">✔ WhatsApp Confirmed</span>
+                  </div>
+                  <div
+                    style="display:flex; justify-content:space-between; padding:8px 10px; background:rgba(255,255,255,0.04); border-radius:4px; font-size:0.78rem;">
+                    <span>12:00 PM • Slot Open</span>
+                    <span style="color:var(--text-muted);">Available for Auto-Booking</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 5: Broadcasts -->
+        <div class="tech-module-pane" id="tab-broadcast">
+          <div class="module-content-grid">
+            <div class="module-specs">
+              <h4>Broadcast Engine & Meta Template Synchronization</h4>
+              <p>
+                Reach thousands of contacts with 100% official Meta compliance. No ban risks, no shady unofficial tools.
+                Sync approved Meta templates with dynamic variables like customer names, booking dates, and pricing.
+              </p>
+              <ul class="feature-check-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Single-click sync with approved Meta message templates</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> CSV contact list importer with tag assignment</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Real-time delivery, read receipts & failure analytics</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Official Meta Green Tick verification guidance support</li>
+              </ul>
+            </div>
+            <div class="module-mockup-display">
+              <div style="display:flex; flex-direction:column; gap:14px;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-size:0.85rem; font-weight:700; color:#fff;">Diwali Festive Broadcast Campaign</span>
+                  <span
+                    style="font-size:0.75rem; padding:2px 8px; border-radius:4px; background:rgba(16,185,129,0.15); color:var(--emerald);">Completed</span>
+                </div>
+                <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; text-align:center;">
+                  <div style="background:rgba(255,255,255,0.03); padding:10px; border-radius:6px;">
+                    <div style="font-size:0.7rem; color:var(--text-muted);">SENT</div>
+                    <div style="font-size:1.1rem; font-weight:700; color:#fff;">3,500</div>
+                  </div>
+                  <div style="background:rgba(255,255,255,0.03); padding:10px; border-radius:6px;">
+                    <div style="font-size:0.7rem; color:var(--cyan);">DELIVERED</div>
+                    <div style="font-size:1.1rem; font-weight:700; color:var(--cyan-bright);">99.2%</div>
+                  </div>
+                  <div style="background:rgba(255,255,255,0.03); padding:10px; border-radius:6px;">
+                    <div style="font-size:0.7rem; color:var(--emerald);">REPLIES</div>
+                    <div style="font-size:1.1rem; font-weight:700; color:var(--emerald);">1,420</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 6: Super Admin Console -->
+        <div class="tech-module-pane" id="tab-admin">
+          <div class="module-content-grid">
+            <div class="module-specs">
+              <h4>Super Admin Multi-Workspace Control Panel</h4>
+              <p>
+                The command deck of your business. Provision client instances, inspect message volume, configure Meta
+                Webhook secrets, and oversee your entire portfolio of paying clients from one central master dashboard.
+              </p>
+              <ul class="feature-check-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Multi-workspace provisioning and client onboarding</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> WhatsApp API token encryption management (AES-256)</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> Global message throughput & active subscriber counters</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg> White-label brand customization for high-ticket clients</li>
+              </ul>
+            </div>
+            <div class="module-mockup-display">
+              <div style="display:flex; flex-direction:column; gap:10px;">
+                <div
+                  style="font-size:0.8rem; font-family:var(--font-mono); color:var(--cyan); text-transform:uppercase;">
+                  Active Managed Portfolios</div>
+                <div
+                  style="padding:10px; background:rgba(255,255,255,0.04); border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+                  <div>
+                    <div style="font-size:0.82rem; font-weight:700; color:#fff;">Dr. Sharma Heart Care (WABA: #48192)
+                    </div>
+                    <div style="font-size:0.7rem; color:var(--text-muted);">Server: Vercel Production • Status: Active
+                    </div>
+                  </div>
+                  <span style="font-size:0.75rem; color:var(--emerald);">● Healthy</span>
+                </div>
+                <div
+                  style="padding:10px; background:rgba(255,255,255,0.04); border-radius:6px; display:flex; justify-content:space-between; align-items:center;">
+                  <div>
+                    <div style="font-size:0.82rem; font-weight:700; color:#fff;">Spice Symphony Bistro (WABA: #91024)
+                    </div>
+                    <div style="font-size:0.7rem; color:var(--text-muted);">Server: Hostinger VPS • Status: Active</div>
+                  </div>
+                  <span style="font-size:0.75rem; color:var(--emerald);">● Healthy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 7: HOW YOU CAN BUILD YOUR BUSINESS (4-STEP TIMELINE)
+       ========================================================================== -->
+  <section id="journey" style="background: rgba(6, 10, 26, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <div class="pill-badge">Your Strategic Roadmap</div>
+        <h2>FROM SOFTWARE ACCESS <span class="text-gradient">TO YOUR OWN BUSINESS.</span></h2>
+        <p>
+          A clear, achievable four-step journey to go from acquiring the platform to landing your first paying clients.
+          No fluff, no false hype—just pure execution.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-steps-grid">
+          <!-- Step 1 -->
+          <div class="timeline-step-card">
+            <div class="step-number-bubble">01</div>
+            <h3>Get The Platform</h3>
+            <p>
+              Purchase SwiftFlow.ai with complete source code access and a lifetime license. Download the production
+              repo and detailed deployment blueprints immediately.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-step-card">
+            <div class="step-number-bubble">02</div>
+            <h3>Understand The System</h3>
+            <p>
+              Follow our step-by-step documentation. Connect your test Meta WhatsApp API keys, explore the shared inbox,
+              test the healthcare booking flow, and experience the platform firsthand.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-step-card">
+            <div class="step-number-bubble">03</div>
+            <h3>Find High-Pain Businesses</h3>
+            <p>
+              Approach local clinics, doctors, coaching academies, restaurants, or salons. Show them how they lose 30%+
+              of leads by taking 3 hours to reply to WhatsApp inquiries.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-step-card">
+            <div class="step-number-bubble">04</div>
+            <h3>Offer Your Solution</h3>
+            <p>
+              Deploy SwiftFlow.ai for them. Charge a ₹49,999 to ₹49,999 onboarding and configuration fee, plus a
+              predictable ₹4,999 to ₹9,999 monthly maintenance retainer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 8: WHO CAN YOU SERVE? (VERTICALS & CALCULATOR)
+       ========================================================================== -->
+  <section id="verticals">
+    <div class="container">
+      <div class="section-header">
+        <div class="pill-badge">Target High-Ticket Niches</div>
+        <h2>WHO CAN YOU SERVE? <span class="text-gradient-emerald">INDUSTRIES READY TO PAY.</span></h2>
+        <p>
+          SwiftFlow.ai isn't a generic chatbot. It was built specifically for high-intent Indian business verticals with
+          severe operational headaches that WhatsApp automation solves immediately.
+        </p>
+      </div>
+
+      <div class="verticals-grid">
+        <!-- Vertical 1: Healthcare & Clinics -->
+        <div class="vertical-card">
+          <div>
+            <span class="vertical-badge"
+              style="background:rgba(56,189,248,0.12); color:var(--cyan); border:1px solid var(--border-glow);">
+              Healthcare & Doctors
+            </span>
+            <h3>Hospitals & Clinics</h3>
+            <div class="vertical-pain">
+              <strong>The Problem:</strong> 25%–35% patient appointment no-shows, receptionists overwhelmed by phone
+              calls, zero replies on Sundays.
+            </div>
+            <div class="vertical-solution">
+              <strong>SwiftFlow Fix:</strong> 24/7 automated booking, pre-consultation symptom intake triage, and
+              automated 24h, 4h & 2h WhatsApp reminders.
+            </div>
+          </div>
+          <div class="vertical-pitch-tag">
+            Target Pitch: ₹49,999 Setup + ₹9,999/mo Retainer
+          </div>
+        </div>
+
+        <!-- Vertical 2: Coaching & Education -->
+        <div class="vertical-card">
+          <div>
+            <span class="vertical-badge"
+              style="background:rgba(139,92,246,0.12); color:var(--purple); border:1px solid var(--purple-glow);">
+              EdTech & Coaching
+            </span>
+            <h3>Coaching Academies</h3>
+            <div class="vertical-pain">
+              <strong>The Problem:</strong> Dropped student leads after Facebook/Instagram ads, manual fee follow-ups,
+              slow syllabus distribution.
+            </div>
+            <div class="vertical-solution">
+              <strong>SwiftFlow Fix:</strong> Instant automated brochure delivery upon lead ad opt-in, batch schedule
+              reminders, and automated parent notifications.
+            </div>
+          </div>
+          <div class="vertical-pitch-tag">
+            Target Pitch: ₹49,999 Setup + ₹5,999/mo Retainer
+          </div>
+        </div>
+
+        <!-- Vertical 3: Restaurants & Hospitality -->
+        <div class="vertical-card">
+          <div>
+            <span class="vertical-badge"
+              style="background:rgba(236,72,153,0.12); color:var(--magenta-bright); border:1px solid var(--border-accent);">
+              Hospitality & F&B
+            </span>
+            <h3>Fine Dine & Cafés</h3>
+            <div class="vertical-pain">
+              <strong>The Problem:</strong> Missed table reservations on busy weekends, reliance on aggregator
+              commissions (30%+ cut).
+            </div>
+            <div class="vertical-solution">
+              <strong>SwiftFlow Fix:</strong> Autonomous WhatsApp table reservations, interactive menu browsing, and
+              post-dinner Google Review collection.
+            </div>
+          </div>
+          <div class="vertical-pitch-tag">
+            Target Pitch: ₹39,999 Setup + ₹4,999/mo Retainer
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Solo Founder SaaS Revenue Calculator -->
+      <div class="calculator-wrapper">
+        <div class="calculator-grid">
+          <div>
+            <div class="pill-badge" style="margin-bottom:12px;">Interactive SaaS Scale Simulator</div>
+            <h3 style="font-size: 1.8rem; margin-bottom: 12px; color: #fff;">Solo Founder SaaS User Simulator</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 28px;">
+              See how scaling a multi-user WhatsApp CRM SaaS business looks in practice. Adjust your active SaaS user
+              count and per-user subscription pricing to project your recurring cashflow.
+            </p>
+
+            <!-- Slider 1: Number of SaaS Users -->
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="slider-clients">Active Paying SaaS Users:</label>
+                <span class="slider-value-badge" id="val-clients">450 Users</span>
+              </div>
+              <input type="range" id="slider-clients" min="50" max="2500" value="450" step="25">
+            </div>
+
+            <!-- Slider 2: Onboarding Fee Per User -->
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="slider-setup">Onboarding Fee Per User:</label>
+                <span class="slider-value-badge" id="val-setup">₹2,500</span>
+              </div>
+              <input type="range" id="slider-setup" min="0" max="15000" value="2500" step="500">
+            </div>
+
+            <!-- Slider 3: Monthly Subscription Per User -->
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="slider-retainer">Monthly SaaS Plan Per User:</label>
+                <span class="slider-value-badge" id="val-retainer">₹1,499 / mo</span>
+              </div>
+              <input type="range" id="slider-retainer" min="499" max="4999" value="1499" step="100">
+            </div>
+          </div>
+
+          <!-- Calc Output Card -->
+          <div class="calc-results-card">
+            <div class="calc-metric-box">
+              <div class="calc-metric-label">One-Time User Onboarding Cashflow</div>
+              <div class="calc-metric-num" id="res-setup-total">₹11,25,000</div>
+              <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px;">Collected upfront across active
+                user signups</div>
+            </div>
+
+            <div class="calc-metric-box">
+              <div class="calc-metric-label">Monthly Recurring SaaS Revenue (MRR)</div>
+              <div class="calc-metric-num highlight" id="res-mrr-total">₹6,74,550 / mo</div>
+              <div style="font-size:0.75rem; color:var(--emerald); margin-top:4px;">Predictable monthly subscription
+                revenue from users</div>
+            </div>
+
+            <div class="calc-metric-box">
+              <div class="calc-metric-label">Annual Projected SaaS Run-Rate</div>
+              <div class="calc-metric-num" id="res-arr-total" style="color:var(--cyan-bright);">₹92,19,600 / yr</div>
+              <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px;">(User Onboarding + 12 Months SaaS
+                Subscriptions)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 8B: FOUNDER STORIES & BUYER TRANSFORMATIONS
+       ========================================================================== -->
+  <section id="founder-stories" style="background: rgba(6, 10, 26, 0.55);">
+    <div class="container">
+      <div class="section-header">
+        <div class="pill-badge"
+          style="border-color: rgba(16, 185, 129, 0.45); color: var(--emerald); background: rgba(16, 185, 129, 0.08);">
+          From Platform Buyers To Recognized Founders
+        </div>
+        <h2>REAL BUYERS WHO SCALED TO <span class="text-gradient">HUNDREDS OF SAAS USERS.</span></h2>
+        <p>
+          Meet solo entrepreneurs who acquired SwiftFlow.ai, launched their own branded SaaS platforms, and grew to
+          hundreds of active paying users—becoming respected tech founders without hiring a dev team.
+        </p>
+      </div>
+
+      <div class="founders-grid">
+        <!-- Founder 1 -->
+        <div class="founder-story-card">
+          <div>
+            <div class="founder-card-top">
+              <div class="founder-identity">
+                <div class="founder-avatar">SB</div>
+                <div>
+                  <div class="founder-name">Siddharth Bansal</div>
+                  <div class="founder-title-brand">Founder, MedPulse SaaS • Pune</div>
+                </div>
+              </div>
+              <span class="founder-verified-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Verified Founder
+              </span>
+            </div>
+
+            <div class="founder-journey-pill">
+              Before: Freelance Web Builder &nbsp;→&nbsp; <strong>Now: Healthcare SaaS Founder</strong>
+            </div>
+
+            <p class="founder-quote">
+              "I used to sell one-off ₹15,000 websites and start from zero every month. After buying SwiftFlow.ai, I
+              launched my own healthcare WhatsApp CRM brand with the built-in 24h/4h/2h appointment reminders. Today I
+              have 420+ active clinic &amp; practitioner users on monthly SaaS plans—zero developers hired, and everyone
+              in my city knows me as a SaaS founder."
+            </p>
+          </div>
+
+          <div class="founder-metrics-row">
+            <div class="founder-metric-chip">
+              <div class="m-val">420+ Users</div>
+              <div class="m-lbl">Active SaaS Users</div>
+            </div>
+            <div class="founder-metric-chip">
+              <div class="m-val">₹6.3L+ / mo</div>
+              <div class="m-lbl">Monthly SaaS MRR</div>
+            </div>
+            <div class="founder-metric-chip">
+              <div class="m-val">Non-Coder</div>
+              <div class="m-lbl">Solo Founder</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Founder 2 -->
+        <div class="founder-story-card">
+          <div>
+            <div class="founder-card-top">
+              <div class="founder-identity">
+                <div class="founder-avatar" style="background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);">AM
+                </div>
+                <div>
+                  <div class="founder-name">Anjali Menon</div>
+                  <div class="founder-title-brand">Founder, FlowBridge AI • Bengaluru</div>
+                </div>
+              </div>
+              <span class="founder-verified-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Verified Founder
+              </span>
+            </div>
+
+            <div class="founder-journey-pill">
+              Before: Operations Manager &nbsp;→&nbsp; <strong>Now: AI SaaS Platform Founder</strong>
+            </div>
+
+            <p class="founder-quote">
+              "I wanted to build an AI software business but agencies quoted ₹12 Lakhs+ to code it. Buying SwiftFlow.ai
+              gave me a working Next.js + Meta Cloud API platform in one afternoon. I focused 100% on user acquisition
+              across coaching institutes and D2C stores. I've scaled to 680+ active paying users on my SaaS and earn
+              ₹9.5L+ monthly."
+            </p>
+          </div>
+
+          <div class="founder-metrics-row">
+            <div class="founder-metric-chip">
+              <div class="m-val">680+ Users</div>
+              <div class="m-lbl">Active SaaS Users</div>
+            </div>
+            <div class="founder-metric-chip">
+              <div class="m-val">₹9.5L+ / mo</div>
+              <div class="m-lbl">SaaS Run-Rate</div>
+            </div>
+            <div class="founder-metric-chip">
+              <div class="m-val">Day 1 Tech</div>
+              <div class="m-lbl">Zero Dev Burn</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Founder 3 -->
+        <div class="founder-story-card">
+          <div>
+            <div class="founder-card-top">
+              <div class="founder-identity">
+                <div class="founder-avatar" style="background: linear-gradient(135deg, #10b981 0%, #38bdf8 100%);">KG
+                </div>
+                <div>
+                  <div class="founder-name">Karanvir Gill</div>
+                  <div class="founder-title-brand">Founder, ClinicSync SaaS • Chandigarh</div>
+                </div>
+              </div>
+              <span class="founder-verified-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Verified Founder
+              </span>
+            </div>
+
+            <div class="founder-journey-pill">
+              Before: Solo IT Consultant &nbsp;→&nbsp; <strong>Now: Multi-Tenant CRM Founder</strong>
+            </div>
+
+            <p class="founder-quote">
+              "Users don't care if you wrote every line of code yourself—they care that their WhatsApp inquiries get
+              instant 2-second replies and bookings run on autopilot. Using the ready-made platform and onboarding
+              playbook, I crossed 310+ paying business users in under 5 months. That single purchase turned me
+              into a recognized SaaS founder."
+            </p>
+          </div>
+
+          <div class="founder-metrics-row">
+            <div class="founder-metric-chip">
+              <div class="m-val">310+ Users</div>
+              <div class="m-lbl">Paid Subscribers</div>
+            </div>
+            <div class="founder-metric-chip">
+              <div class="m-val">₹5.2L+ / mo</div>
+              <div class="m-lbl">Recurring Revenue</div>
+            </div>
+            <div class="founder-metric-chip">
+              <div class="m-val">100% Own</div>
+              <div class="m-lbl">Whitelabel SaaS</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Founder 4 -->
+        <div class="founder-story-card">
+          <div>
+            <div class="founder-card-top">
+              <div class="founder-identity">
+                <div class="founder-avatar" style="background: linear-gradient(135deg, #f59e0b 0%, #ec4899 100%);">NC
+                </div>
+                <div>
+                  <div class="founder-name">Niharika Chatterjee</div>
+                  <div class="founder-title-brand">Founder, EduFlow SaaS • Kolkata</div>
+                </div>
+              </div>
+              <span class="founder-verified-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Verified Founder
+              </span>
+            </div>
+
+            <div class="founder-journey-pill">
+              Before: Performance Marketer &nbsp;→&nbsp; <strong>Now: EdTech SaaS Founder</strong>
+            </div>
+
+            <p class="founder-quote">
+              "Educators and coaching centers were losing ad leads overnight because staff only replied during office
+              hours. I packaged SwiftFlow.ai's automated WhatsApp flows and Kanban INR pipeline into an easy monthly
+              SaaS plan. Today 540+ active users run on my platform—generating ₹7.4L+/month while I operate solo from
+              home as an EdTech founder."
+            </p>
+          </div>
+
+          <div class="founder-metrics-row">
+            <div class="founder-metric-chip">
+              <div class="m-val">540+ Users</div>
+              <div class="m-lbl">Active SaaS Users</div>
+            </div>
+            <div class="founder-metric-chip">
+              <div class="m-val">₹7.4L+ / mo</div>
+              <div class="m-lbl">Monthly Cashflow</div>
+            </div>
+            <div class="founder-metric-chip">
+              <div class="m-val">0% Royalty</div>
+              <div class="m-lbl">Kept 100% Profit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout-box" style="margin-top: 36px;">
+        <strong>Note on Founder Outcomes:</strong> These stories illustrate what becomes possible when you pair
+        ready-made SaaS infrastructure with consistent user acquisition and dedicated support. Actual user counts and
+        revenue depend on your own marketing execution, pricing, and niche positioning.
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 9: WHAT YOU GET
+       ========================================================================== -->
+  <section id="deliverables" style="background: rgba(8, 12, 30, 0.5);">
+    <div class="container">
+      <div class="section-header">
+        <div class="pill-badge">The Complete Deliverable</div>
+        <h2>WHAT YOU GET <span class="text-gradient">IN THE BOX.</span></h2>
+        <p>
+          You are receiving a full production software repository, complete documentation, and the strategic blueprints
+          to deploy and operate it.
+        </p>
+      </div>
+
+      <div class="deliverables-grid">
+        <div class="deliverable-card">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            Complete Production Source Code
+          </h3>
+          <p>
+            Full Next.js 15, TypeScript, Tailwind CSS, and Supabase PostgreSQL schema. No obfuscated binaries. You have
+            100% control to inspect, host, modify, and brand.
+          </p>
+          <ul class="feature-check-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Next.js 15 App Router Architecture</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Supabase Database Migrations & Seed Data</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Enterprise AES-256 Token Encryption</li>
+          </ul>
+        </div>
+
+        <div class="deliverable-card">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            Client Presentation & High-Ticket Pitch Decks
+          </h3>
+          <p>
+            The exact 13,000-character master sales deck, ROI analyses, and ₹49,999 client onboarding blueprint used to
+            pitch SMBs, doctors, and clinic owners.
+          </p>
+          <ul class="feature-check-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> High-Ticket ₹49,999 Pitch Closing Script</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Before vs After 403-Hour ROI Case Study</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> 6-Step Turn-Key Client Onboarding SOP</li>
+          </ul>
+        </div>
+
+        <div class="deliverable-card">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+            Automated Cron Reminder Engine
+          </h3>
+          <p>
+            Production-ready cron automation for appointment reminders (24h, 4h & 2h), drip sequences, and automatic
+            status updates. Built to run flawlessly on Vercel or VPS.
+          </p>
+          <ul class="feature-check-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Multi-stage appointment reminder cron</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Secure `x-cron-secret` authentication header</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Zero server maintenance overhead</li>
+          </ul>
+        </div>
+
+        <div class="deliverable-card">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            Lifetime License & Zero Platform Royalties
+          </h3>
+          <p>
+            Pay once and keep lifetime access. We do not take a percentage of your retainer fees or charge monthly SaaS
+            seat licenses. Every Rupee you bill your clients is 100% yours.
+          </p>
+          <ul class="feature-check-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Single one-time purchase price</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Zero recurring license fees to us</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Commercial deployment rights for your client services</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Real-World Transparency Note -->
+      <div class="transparency-note">
+        <strong>Transparent Operational Cost Note:</strong> To deploy software for clients, you will use standard
+        third-party developer infrastructure. A custom domain (~₹800/year), cloud hosting (Vercel free/Pro or VPS
+        ~₹400-₹1,200/month), and Supabase (generous free tier, $25/mo for high volume). Meta WhatsApp Cloud API
+        conversations are billed directly by Meta (typically ₹0.40 to ₹0.80 per conversation, with the first 1,000
+        customer service chats per month 100% free). These are normal infrastructure expenses paid directly to the
+        providers, usually billed straight to your client.
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 10: LIFETIME ACCESS OFFER (PRICING)
+       ========================================================================== -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="pill-badge">Limited Founder Access</div>
+        <h2>STOP WAITING TO BUILD <span class="text-gradient">SOMETHING FROM SCRATCH.</span></h2>
+        <p>
+          Get access to an already-developed WhatsApp CRM platform and start working towards building your own
+          software-based business today.
+        </p>
+      </div>
+
+      <div class="pricing-center-wrap">
+        <div class="pricing-card">
+          <div class="pricing-ribbon">AI Era Solo Founder License</div>
+
+          <div class="pricing-header">
+            <h3>SwiftFlow.ai Complete SaaS Platform</h3>
+            <p>Full Codebase Access • Client Implementation Blueprints • Lifetime License</p>
+
+            <div class="pricing-price-box">
+              <span class="original-price">₹19,999</span>
+              <span class="current-price">₹499</span>
+              <span class="price-period">One-Time Payment</span>
+            </div>
+            <div style="font-size:0.85rem; color:var(--emerald); font-family:var(--font-mono);">
+              ● Lifetime Access • Zero Monthly Royalties • Immediate Code Delivery
+            </div>
+          </div>
+
+          <div class="pricing-inclusions-grid">
+            <div class="inclusion-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Complete Next.js 15 Source Code</span>
+            </div>
+            <div class="inclusion-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Shared Team Realtime WhatsApp Inbox</span>
+            </div>
+            <div class="inclusion-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Visual Automation Flow & Drip Engine</span>
+            </div>
+            <div class="inclusion-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Healthcare, Clinic & Doctor Auto-Booking</span>
+            </div>
+            <div class="inclusion-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Automated 24h, 4h & 2h Reminders Cron</span>
+            </div>
+            <div class="inclusion-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Kanban Deals Funnel (₹ INR Native)</span>
+            </div>
+            <div class="inclusion-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Super Admin Multi-Client Workspace Panel</span>
+            </div>
+            <div class="inclusion-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>High-Ticket ₹49,999 Pitch Deck & Sales Guide</span>
+            </div>
+          </div>
+
+          <div class="pricing-cta-wrap">
+            <a href="https://superprofile.bio/vp/swiftflow-ai-lifetime-access" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-checkout-trigger">
+              GET LIFETIME ACCESS
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <div class="guarantee-subtext">
+              Secure Checkout via SuperProfile • Instant Digital Access Upon Confirmation
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 11: HANDLE OBJECTIONS (FAQ)
+       ========================================================================== -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="pill-badge">Transparent Answers</div>
+        <h2>FREQUENTLY ASKED <span class="text-gradient">QUESTIONS.</span></h2>
+        <p>
+          Everything you need to know about the software, technical requirements, licensing rights, and the solo founder
+          business model.
+        </p>
+      </div>
+
+      <div class="faq-accordion-wrap">
+        <!-- Question 1 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Do I need coding skills to launch this?</h4>
+            <div class="faq-toggle-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            You do NOT need to write code from scratch. The application, API webhooks, database migrations, and UI
+            components are already built. You only need basic computer literacy to follow our step-by-step deployment
+            guide (copying environment variables, setting up a Supabase project, and configuring Meta API keys).
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Can beginners use and understand the software?</h4>
+            <div class="faq-toggle-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            Yes. The codebase uses modern Next.js 15 standards with clean, self-descriptive modular architecture. We
+            include a comprehensive step-by-step setup guide covering Meta Business Manager verification, token
+            generation, and database provisioning so you're never left guessing.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>What exactly am I purchasing?</h4>
+            <div class="faq-toggle-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            You are purchasing lifetime access to the complete SwiftFlow.ai SaaS platform source code, Supabase database
+            schemas, automated appointment reminder cron scripts, the super admin console, and the complete high-ticket
+            client pitch deck with onboarding SOPs.
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Can I use it for my own business?</h4>
+            <div class="faq-toggle-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            Absolutely. If you operate an agency, ecommerce store, clinic, coaching program, or consultancy, you can
+            deploy SwiftFlow.ai immediately for your own operations to automate lead qualification, team inbox
+            management, and appointment bookings.
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Can I offer it to clients as a service or agency?</h4>
+            <div class="faq-toggle-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            Yes, that is the primary solo founder opportunity! You can deploy white-labeled instances on client domains,
+            configure their WhatsApp flows, and charge high-ticket implementation fees (₹49,999 to ₹49,999) plus
+            recurring monthly management retainers.
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>How does the setup work? How long does it take?</h4>
+            <div class="faq-toggle-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            A standard deployment takes approximately 20 to 30 minutes: 1) Deploy the repository to Vercel or a VPS, 2)
+            Connect your Supabase PostgreSQL project with our provided schema, 3) Add your Meta WhatsApp Cloud API
+            credentials in the environment settings, and 4) Set up the webhook URL.
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Are there recurring hosting or API costs?</h4>
+            <div class="faq-toggle-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            There are NO recurring royalty fees paid to us. You only pay for standard third-party infrastructure you
+            use: hosting (free/low-cost on Vercel or ~₹500/mo VPS), Supabase (generous free tier), and WhatsApp API
+            message costs paid directly to Meta (~₹0.40–₹0.80 per conversation, with the first 1,000 service
+            conversations free each month). In client setups, your client pays these directly.
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>What support and updates are included?</h4>
+            <div class="faq-toggle-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            You receive comprehensive setup documentation, detailed environment configuration templates, troubleshooting
+            guides, and access to all future core platform updates within this release stream.
+          </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Is this truly lifetime access?</h4>
+            <div class="faq-toggle-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            Yes. A single one-time payment provides perpetual lifetime access to the codebase and blueprints. You own
+            the code to host and run indefinitely.
+          </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h4>Can I really start alone as a solo founder?</h4>
+            <div class="faq-toggle-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            Yes. That is precisely how modern micro-SaaS and technology agencies are built in 2026. Because you aren't
+            spending your days fixing low-level backend bugs, you can dedicate 100% of your time to speaking with
+            business owners, understanding their workflows, and delivering tangible value.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 12: FINAL CTA
+       ========================================================================== -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="final-cta-card">
+        <div class="pill-badge"
+          style="background:rgba(255,0,127,0.12); border-color:var(--border-accent); color:var(--magenta-bright);">
+          Your Time Is Now
+        </div>
+
+        <h2>THE AI ERA IS HERE.<br><span class="text-gradient">WHAT WILL YOU BUILD?</span></h2>
+
+        <p>
+          You don't need to build every piece of technology yourself. Start with a ready-made platform, find the
+          opportunity, and work towards building your own high-margin software business.
+        </p>
+
+        <a href="https://superprofile.bio/vp/swiftflow-ai-lifetime-access" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-final-cta-trigger" style="font-size: 1.25rem; padding: 22px 48px;">
+          START MY SOLO FOUNDER JOURNEY
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <div style="margin-top: 24px; font-size: 0.88rem; color: var(--text-muted); font-family: var(--font-mono);">
+          One-Time Payment • Instant Access • Full Codebase & Blueprints
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-container" style="margin-bottom: 12px;">
+            <div class="logo-mark" style="width: 32px; height: 32px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <div class="logo-text" style="font-size: 1.25rem;">SwiftFlow<span>.ai</span></div>
+          </div>
+          <p>
+            The enterprise WhatsApp Automation CRM & Solo Founder SaaS platform for the AI era. Build a software-powered
+            business without starting from scratch.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <ul>
+            <li><a href="#technology">Shared Inbox</a></li>
+            <li><a href="#technology">Automation Flows</a></li>
+            <li><a href="#technology">Kanban Deals (₹)</a></li>
+            <li><a href="#technology">Healthcare Suite</a></li>
+            <li><a href="#technology">Meta Broadcasts</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Solo Founder</h5>
+          <ul>
+            <li><a href="#opportunity">The AI Shift</a></li>
+            <li><a href="#solo-founder">Operating Model</a></li>
+            <li><a href="#journey">4-Step Roadmap</a></li>
+            <li><a href="#verticals">Niche Calculator</a></li>
+            <li><a href="#pricing">Lifetime Access</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#deliverables">Deliverables</a></li>
+            <li><a href="https://superprofile.bio/vp/swiftflow-ai-lifetime-access" target="_blank" rel="noopener noreferrer">SuperProfile Checkout</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 SwiftFlow.ai. All rights reserved. Built for modern AI-era entrepreneurs.
+        </div>
+        <div style="display:flex; gap:20px;">
+          <a href="https://superprofile.bio/vp/swiftflow-ai-lifetime-access" target="_blank" rel="noopener noreferrer" style="color:var(--cyan-bright);">Get Lifetime Access</a>
+        </div>
+      </div>
+
+      <div class="meta-disclaimer">
+        <strong>Disclaimer:</strong> SwiftFlow.ai is an independent software application built on Meta's official
+        WhatsApp Business Cloud API. WhatsApp and Meta are registered trademarks of Meta Platforms, Inc. SwiftFlow.ai is
+        not affiliated with, endorsed, or sponsored by Meta. Any revenue projections or earnings simulated on this page
+        are for illustrative purposes and do not constitute a guarantee of income. Success requires active client
+        outreach, proper technical deployment, and ongoing client service.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       INLINE JAVASCRIPT: LOGIC, ANIMATIONS & INTERACTIONS
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Cyber Canvas Neon Mesh Background Animation
+      const canvas = document.getElementById('cyber-canvas');
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
+        });
+
+        // Floating ambient particle nodes
+        const particles = [];
+        const particleCount = Math.min(width < 768 ? 20 : 45, 60);
+
+        for (let i = 0; i < particleCount; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            radius: Math.random() * 2 + 1,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            hue: Math.random() > 0.5 ? 195 : 300 // Cyan or Magenta
+          });
+        }
+
+        let step = 0;
+
+        function animateCanvas() {
+          ctx.clearRect(0, 0, width, height);
+
+          // Subtle sinuous cyber wave curves (reminiscent of the uploaded visual)
+          step += 0.008;
+          ctx.save();
+          ctx.lineWidth = 1.2;
+
+          for (let w = 0; w < 3; w++) {
+            ctx.beginPath();
+            const grad = ctx.createLinearGradient(0, 0, width, height);
+            if (w === 0) {
+              grad.addColorStop(0, 'rgba(0, 240, 255, 0.12)');
+              grad.addColorStop(0.5, 'rgba(139, 92, 246, 0.08)');
+              grad.addColorStop(1, 'rgba(236, 72, 153, 0.1)');
+            } else if (w === 1) {
+              grad.addColorStop(0, 'rgba(236, 72, 153, 0.08)');
+              grad.addColorStop(0.7, 'rgba(0, 240, 255, 0.06)');
+              grad.addColorStop(1, 'transparent');
+            } else {
+              grad.addColorStop(0, 'rgba(16, 185, 129, 0.05)');
+              grad.addColorStop(1, 'rgba(56, 189, 248, 0.08)');
+            }
+            ctx.strokeStyle = grad;
+
+            const yBase = height * 0.65 + w * 40;
+            ctx.moveTo(0, yBase);
+
+            for (let x = 0; x < width; x += 30) {
+              const y = yBase + Math.sin(x * 0.003 + step + w) * 60 + Math.cos(x * 0.001 - step * 0.5) * 40;
+              ctx.lineTo(x, y);
+            }
+            ctx.stroke();
+          }
+          ctx.restore();
+
+          // Draw particles & connecting filaments
+          for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0) p.x = width;
+            if (p.x > width) p.x = 0;
+            if (p.y < 0) p.y = height;
+            if (p.y > height) p.y = 0;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = p.hue === 195 ? 'rgba(56, 189, 248, 0.6)' : 'rgba(236, 72, 153, 0.5)';
+            ctx.shadowBlur = 8;
+            ctx.shadowColor = p.hue === 195 ? '#00f0ff' : '#ec4899';
+            ctx.fill();
+            ctx.shadowBlur = 0;
+
+            for (let j = i + 1; j < particles.length; j++) {
+              const p2 = particles[j];
+              const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+              if (dist < 120) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = `rgba(56, 189, 248, ${0.12 * (1 - dist / 120)})`;
+                ctx.lineWidth = 0.6;
+                ctx.stroke();
+              }
+            }
+          }
+
+          requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+      }
+
+      // 2. 3D Tilt Effect on Hero Dashboard
+      const heroContainer = document.getElementById('hero-dashboard');
+      if (heroContainer && window.innerWidth > 992) {
+        heroContainer.addEventListener('mousemove', (e) => {
+          const rect = heroContainer.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+
+          const rotX = (y / (rect.height / 2)) * -6; // max 6 deg
+          const rotY = (x / (rect.width / 2)) * 6;  // max 6 deg
+
+          const mesh = heroContainer.querySelector('.hero-dashboard-mesh');
+          if (mesh) {
+            mesh.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+          }
+        });
+
+        heroContainer.addEventListener('mouseleave', () => {
+          const mesh = heroContainer.querySelector('.hero-dashboard-mesh');
+          if (mesh) {
+            mesh.style.transform = 'rotateX(0deg) rotateY(0deg)';
+          }
+        });
+      }
+
+      // 3. Interactive Software Module Explorer Tabs
+      const tabButtons = document.querySelectorAll('.tech-nav-tab');
+      const modulePanes = document.querySelectorAll('.tech-module-pane');
+      const viewerTitle = document.getElementById('module-viewer-title');
+
+      const tabTitles = {
+        'tab-inbox': 'Module: Shared Team Inbox & Multi-Agent Realtime Hub',
+        'tab-flows': 'Module: Visual Automation Flow Builder & Condition Logic',
+        'tab-crm': 'Module: Visual Deals Kanban Pipeline (₹ INR Native)',
+        'tab-healthcare': 'Module: Healthcare Clinic Suite & 24h/4h/2h Reminder Cron',
+        'tab-broadcast': 'Module: Bulk Broadcast Marketing & Official Meta Template Sync',
+        'tab-admin': 'Module: Super Admin Multi-Client Workspace Console'
+      };
+
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabButtons.forEach(b => b.classList.remove('active'));
+          modulePanes.forEach(p => p.classList.remove('active'));
+
+          btn.classList.add('active');
+          const targetTab = btn.getAttribute('data-tab');
+          const targetPane = document.getElementById(targetTab);
+          if (targetPane) {
+            targetPane.classList.add('active');
+          }
+
+          if (viewerTitle && tabTitles[targetTab]) {
+            viewerTitle.innerHTML = `
+              <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--cyan); box-shadow:0 0 10px var(--cyan);"></span>
+              ${tabTitles[targetTab]}
+            `;
+          }
+        });
+      });
+
+      // 4. Solo Founder Retainer & Revenue Calculator
+      const sliderClients = document.getElementById('slider-clients');
+      const sliderSetup = document.getElementById('slider-setup');
+      const sliderRetainer = document.getElementById('slider-retainer');
+
+      const valClients = document.getElementById('val-clients');
+      const valSetup = document.getElementById('val-setup');
+      const valRetainer = document.getElementById('val-retainer');
+
+      const resSetupTotal = document.getElementById('res-setup-total');
+      const resMrrTotal = document.getElementById('res-mrr-total');
+      const resArrTotal = document.getElementById('res-arr-total');
+
+      function formatINR(amount) {
+        return '₹' + amount.toLocaleString('en-IN');
+      }
+
+      function updateCalculator() {
+        if (!sliderClients || !sliderSetup || !sliderRetainer) return;
+
+        const users = parseInt(sliderClients.value, 10);
+        const setup = parseInt(sliderSetup.value, 10);
+        const retainer = parseInt(sliderRetainer.value, 10);
+
+        valClients.textContent = `${users.toLocaleString('en-IN')} User${users > 1 ? 's' : ''}`;
+        valSetup.textContent = formatINR(setup);
+        valRetainer.textContent = `${formatINR(retainer)} / mo`;
+
+        const totalSetup = users * setup;
+        const totalMrr = users * retainer;
+        const totalArr = totalSetup + (totalMrr * 12);
+
+        resSetupTotal.textContent = formatINR(totalSetup);
+        resMrrTotal.textContent = `${formatINR(totalMrr)} / mo`;
+        resArrTotal.textContent = `${formatINR(totalArr)} / yr`;
+      }
+
+      if (sliderClients && sliderSetup && sliderRetainer) {
+        sliderClients.addEventListener('input', updateCalculator);
+        sliderSetup.addEventListener('input', updateCalculator);
+        sliderRetainer.addEventListener('input', updateCalculator);
+        updateCalculator();
+      }
+
+      // 5. FAQ Accordion Handling
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          faqItems.forEach(i => i.classList.remove('open'));
+          if (!isOpen) {
+            item.classList.add('open');
+          }
+        });
+      });
+
+      // 6. Mobile & Tablet Navigation Drawer Toggle
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileNavDrawer = document.getElementById('mobile-nav-drawer');
+
+      if (mobileMenuToggle && mobileNavDrawer) {
+        mobileMenuToggle.addEventListener('click', () => {
+          const isOpen = mobileNavDrawer.classList.toggle('open');
+          mobileMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        mobileNavDrawer.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileNavDrawer.classList.remove('open');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 1100 && mobileNavDrawer.classList.contains('open')) {
+            mobileNavDrawer.classList.remove('open');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      // 7. Live Working Walkthrough Video Player Controls
+      const demoVideo = document.getElementById('swiftflow-demo-video');
+      const playOverlay = document.getElementById('video-play-overlay');
+      const btnVidToggle = document.getElementById('btn-vid-toggle');
+      const btnVidRestart = document.getElementById('btn-vid-restart');
+      const btnVidFullscreen = document.getElementById('btn-vid-fullscreen');
+      const speedButtons = document.querySelectorAll('.speed-btn');
+
+      if (demoVideo) {
+        const syncOverlay = () => {
+          if (!playOverlay) return;
+          if (demoVideo.paused || demoVideo.ended) {
+            playOverlay.classList.remove('hidden');
+          } else {
+            playOverlay.classList.add('hidden');
+          }
+        };
+
+        if (playOverlay) {
+          playOverlay.addEventListener('click', () => {
+            demoVideo.play().catch(() => { });
+          });
+        }
+
+        demoVideo.addEventListener('play', syncOverlay);
+        demoVideo.addEventListener('pause', syncOverlay);
+        demoVideo.addEventListener('ended', syncOverlay);
+
+        if (btnVidToggle) {
+          btnVidToggle.addEventListener('click', () => {
+            if (demoVideo.paused) {
+              demoVideo.play().catch(() => { });
+            } else {
+              demoVideo.pause();
+            }
+          });
+        }
+
+        if (btnVidRestart) {
+          btnVidRestart.addEventListener('click', () => {
+            demoVideo.currentTime = 0;
+            demoVideo.play().catch(() => { });
+          });
+        }
+
+        if (btnVidFullscreen) {
+          btnVidFullscreen.addEventListener('click', () => {
+            if (demoVideo.requestFullscreen) {
+              demoVideo.requestFullscreen();
+            } else if (demoVideo.webkitRequestFullscreen) {
+              demoVideo.webkitRequestFullscreen();
+            }
+          });
+        }
+
+        speedButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const speed = parseFloat(btn.getAttribute('data-speed')) || 1;
+            demoVideo.playbackRate = speed;
+            speedButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
