@@ -15,7 +15,7 @@
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="public/images/logo/favicon.png">
+  <link rel="icon" type="image/jpeg" href="./improving-logo-icon.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -440,14 +440,24 @@
     }
 
     .logo-mark {
-      width: 40px;
-      height: 40px;
-      border-radius: var(--radius-sm);
-      background: var(--grad-button-primary);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #020817;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 20px var(--cyan-glow);
+      overflow: hidden;
+      border: 1.5px solid rgba(56, 189, 248, 0.55);
+      box-shadow: 0 0 22px var(--cyan-glow);
+      flex-shrink: 0;
+    }
+
+    .logo-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .logo-mark svg {
@@ -2556,12 +2566,10 @@
     <div class="container navbar-inner">
       <a href="#" class="logo-container">
         <div class="logo-mark">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-            stroke-linejoin="round">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-          </svg>
+          <img src="./improving-logo-icon.jpg"
+            onerror="this.onerror=null;this.src='images/logo./improving-logo-icon.jpg';" alt="Improving Logo">
         </div>
-        <div class="logo-text">SwiftFlow<span>.ai</span></div>
+        <div class="logo-text">Improving</div>
       </a>
 
       <ul class="nav-links">
@@ -4215,7 +4223,8 @@
           </div>
 
           <div class="pricing-cta-wrap">
-            <a href="https://superprofile.bio/vp/swiftflow-ai-lifetime-access" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-checkout-trigger">
+            <a href="https://superprofile.bio/vp/swiftflow-ai-lifetime-access" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary" id="btn-checkout-trigger">
               GET LIFETIME ACCESS
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -4436,7 +4445,8 @@
           opportunity, and work towards building your own high-margin software business.
         </p>
 
-        <a href="https://superprofile.bio/vp/swiftflow-ai-lifetime-access" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-final-cta-trigger" style="font-size: 1.25rem; padding: 22px 48px;">
+        <a href="https://superprofile.bio/vp/swiftflow-ai-lifetime-access" target="_blank" rel="noopener noreferrer"
+          class="btn btn-primary" id="btn-final-cta-trigger" style="font-size: 1.25rem; padding: 22px 48px;">
           START MY SOLO FOUNDER JOURNEY
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -4459,12 +4469,11 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo-container" style="margin-bottom: 12px;">
-            <div class="logo-mark" style="width: 32px; height: 32px;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-              </svg>
+            <div class="logo-mark" style="width: 38px; height: 38px;">
+              <img src="./improving-logo-icon.jpg"
+                onerror="this.onerror=null;this.src='images/logo./improving-logo-icon.jpg';" alt="Improving Logo">
             </div>
-            <div class="logo-text" style="font-size: 1.25rem;">SwiftFlow<span>.ai</span></div>
+            <div class="logo-text" style="font-size: 1.35rem;">Improving</div>
           </div>
           <p>
             The enterprise WhatsApp Automation CRM & Solo Founder SaaS platform for the AI era. Build a software-powered
@@ -4499,17 +4508,19 @@
           <ul>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#deliverables">Deliverables</a></li>
-            <li><a href="https://superprofile.bio/vp/swiftflow-ai-lifetime-access" target="_blank" rel="noopener noreferrer">SuperProfile Checkout</a></li>
+            <li><a href="https://superprofile.bio/vp/swiftflow-ai-lifetime-access" target="_blank"
+                rel="noopener noreferrer">SuperProfile Checkout</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>
-          © 2026 SwiftFlow.ai. All rights reserved. Built for modern AI-era entrepreneurs.
+          © 2026 Improving • SwiftFlow.ai. All rights reserved. Built for modern AI-era entrepreneurs.
         </div>
         <div style="display:flex; gap:20px;">
-          <a href="https://superprofile.bio/vp/swiftflow-ai-lifetime-access" target="_blank" rel="noopener noreferrer" style="color:var(--cyan-bright);">Get Lifetime Access</a>
+          <a href="https://superprofile.bio/vp/swiftflow-ai-lifetime-access" target="_blank" rel="noopener noreferrer"
+            style="color:var(--cyan-bright);">Get Lifetime Access</a>
         </div>
       </div>
 
